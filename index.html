@@ -1,1489 +1,1636 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-    ym(105638591, "init", {clickmap:true, trackLinks:true, accurateTrackBounce:true});
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/105638591" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>LOCKOUT TAGOUT - Предотвращение нулевой травматизм при обслуживании оборудования</title>
-<link rel="icon" type="image/png" href="fav.png">
-<script src="https://cdn.tailwindcss.com/3.4.16"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<!-- Загрузка Google Fonts с обработкой ошибок -->
-<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;800&display=swap" rel="stylesheet" onerror="this.onerror=null; console.warn('Ошибка загрузки шрифта Mulish'); document.documentElement.style.setProperty('--font-mulish', 'Arial, sans-serif');">
-<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" onerror="this.onerror=null; console.warn('Ошибка загрузки шрифта Pacifico'); document.documentElement.style.setProperty('--font-pacifico', 'cursive');">
-<!-- Загрузка RemixIcon с обработкой ошибок -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" onerror="this.onerror=null; if(this.href.includes('jsdelivr')) { this.href='https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css'; } else { console.warn('Ошибка загрузки RemixIcon'); }">
-<link rel="preload" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.woff2" as="font" type="font/woff2" crossorigin>
-<script>
-// Защита от ошибок загрузки шрифтов и бинарных данных
-(function() {
-})();
-</script>
-<script>
-// Защита от ошибок загрузки изображений
-(function() {
-  var originalCreateElement = document.createElement;
-  document.createElement = function(tag) {
-    var element = originalCreateElement.call(document, tag);
-    if (tag === 'img') {
-      element.addEventListener('error', function() {
-        console.warn('Image failed to load: ' + this.src);
-      });
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function (m, e, t, r, i, k, a) {
+      m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+      m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+    })
+      (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    ym(105638591, "init", { clickmap: true, trackLinks: true, accurateTrackBounce: true });
+  </script>
+  <noscript>
+    <div><img src="https://mc.yandex.ru/watch/105638591" style="position:absolute; left:-9999px;" alt="" /></div>
+  </noscript>
+  <!-- /Yandex.Metrika counter -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>LOCKOUT TAGOUT - Предотвращение нулевой травматизм при обслуживании оборудования</title>
+  <link rel="icon" type="image/png" href="fav.png">
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Загрузка Google Fonts с обработкой ошибок -->
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;800&display=swap" rel="stylesheet"
+    onerror="this.onerror=null; console.warn('Ошибка загрузки шрифта Mulish'); document.documentElement.style.setProperty('--font-mulish', 'Arial, sans-serif');">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"
+    onerror="this.onerror=null; console.warn('Ошибка загрузки шрифта Pacifico'); document.documentElement.style.setProperty('--font-pacifico', 'cursive');">
+  <!-- Загрузка RemixIcon с обработкой ошибок -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css"
+    onerror="this.onerror=null; if(this.href.includes('jsdelivr')) { this.href='https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css'; } else { console.warn('Ошибка загрузки RemixIcon'); }">
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.woff2" as="font"
+    type="font/woff2" crossorigin>
+  <script>
+    // Защита от ошибок загрузки шрифтов и бинарных данных
+    (function () {
+    })();
+  </script>
+  <script>
+    // Защита от ошибок загрузки изображений
+    (function () {
+      var originalCreateElement = document.createElement;
+      document.createElement = function (tag) {
+        var element = originalCreateElement.call(document, tag);
+        if (tag === 'img') {
+          element.addEventListener('error', function () {
+            console.warn('Image failed to load: ' + this.src);
+          });
+        }
+        return element;
+      };
+    })();
+  </script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#ff3333',
+            secondary: '#ff3333'
+          },
+          borderRadius: {
+            'none': '0px',
+            'sm': '4px',
+            DEFAULT: '8px',
+            'md': '12px',
+            'lg': '16px',
+            'xl': '20px',
+            '2xl': '24px',
+            '3xl': '32px',
+            'full': '9999px',
+            'button': '8px'
+          }
+        }
+      }
     }
-    return element;
-  };
-})();
-</script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-<script>
-tailwind.config = {
-theme: {
-extend: {
-colors: {
-primary: '#ff3333',
-secondary: '#ff3333'
-},
-borderRadius: {
-'none': '0px',
-'sm': '4px',
-DEFAULT: '8px',
-'md': '12px',
-'lg': '16px',
-'xl': '20px',
-'2xl': '24px',
-'3xl': '32px',
-'full': '9999px',
-'button': '8px'
-}
-}
-}
-}
-</script>
-<style>
-.font-mulish-regular {
-font-family: 'Mulish', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-font-weight: 400;
-}
-.font-mulish-semibold {
-font-family: 'Mulish', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-font-weight: 600;
-}
-.font-mulish-extrabold {
-font-family: 'Mulish', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-font-weight: 800;
-}
-.text-4x {
-font-size: 4rem;
-line-height: 0.7;
-}
-.text-2x {
-font-size: 2rem;
-line-height: 1.2;
-}
-.text-x {
-font-size: 1rem;
-line-height: 1.5;
-}
-.hero-bg {
-background-image: url('images/backgrounds/mainbg.png');
-background-size: cover;
-background-position: left center;
-background-repeat: no-repeat;
-background-color: #1a1a1a;
-}
-.hero-bg-lockout {
-background-image: url('images/backgrounds/hero-worker.png');
-background-size: cover;
-background-position: right top;
-background-repeat: no-repeat;
-background-color: #f59e0b;
-}
-.hero-bg-lockout .overlay {
-background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.2) 50%, transparent 100%);
-}
-.overlay {
-background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.2) 100%);
-}
-#mobile-menu-overlay {
-backdrop-filter: blur(6px);
-background: rgba(0, 0, 0, 0.55);
-transition: opacity 0.3s ease;
-}
-.fade-in {
-opacity: 0;
-transform: translateY(40px);
-animation: fadeInUp 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-}
-.fade-in-delay-1 {
-animation-delay: 0.2s;
-}
-.fade-in-delay-2 {
-animation-delay: 0.4s;
-}
-.fade-in-delay-3 {
-animation-delay: 0.6s;
-}
-.fade-in-delay-4 {
-animation-delay: 0.8s;
-}
-section.bg-white {
-background-color: #ffffff;
-}
-section.bg-custom-gray {
-background-color: #E4E4E4;
-}
-.bg-custom-gray {
-background-color: #E4E4E4 !important;
-}
+  </script>
+  <style>
+    .font-mulish-regular {
+      font-family: 'Mulish', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-weight: 400;
+    }
 
-/* Mobile optimization and horizontal scroll fix */
-html, body {
-overflow-x: hidden;
-max-width: 100vw;
-scroll-behavior: smooth;
-}
+    .font-mulish-semibold {
+      font-family: 'Mulish', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-weight: 600;
+    }
 
-/* Улучшенные плавные переходы для всех элементов */
-* {
-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
+    .font-mulish-extrabold {
+      font-family: 'Mulish', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-weight: 800;
+    }
 
-/* Исключения для элементов, которые не должны иметь переходы */
-*:focus,
-*:focus-visible,
-.swiper-wrapper,
-.swiper-slide,
-img,
-video,
-iframe {
-transition: none;
-}
+    .text-4x {
+      font-size: 4rem;
+      line-height: 0.7;
+    }
 
-/* Плавные переходы для интерактивных элементов */
-a, button, input, textarea, select {
-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
+    .text-2x {
+      font-size: 2rem;
+      line-height: 1.2;
+    }
 
-/* Улучшенные переходы для ховера */
-a:hover, button:hover {
-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-}
+    .text-x {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
 
-* {
-box-sizing: border-box;
-}
+    .hero-bg {
+      background-image: url('images/backgrounds/mainbg.png');
+      background-size: cover;
+      background-position: left center;
+      background-repeat: no-repeat;
+      background-color: #1a1a1a;
+    }
 
-/* Fix container widths on mobile */
-@media (max-width: 768px) {
-.container, .max-w-7xl, .max-w-6xl, .max-w-5xl, .max-w-4xl, .max-w-3xl {
-max-width: 100% !important;
-padding-left: 1rem !important;
-padding-right: 1rem !important;
-}
+    .hero-bg-lockout {
+      background-image: url('images/backgrounds/hero-worker.png');
+      background-size: cover;
+      background-position: right top;
+      background-repeat: no-repeat;
+      background-color: #f59e0b;
+    }
 
-/* Fix hero section on mobile */
-.hero-bg {
-min-height: 100vh;
-background-attachment: scroll !important;
-}
+    .hero-bg-lockout .overlay {
+      background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.2) 50%, transparent 100%);
+    }
 
-/* Fix text sizes on mobile */
-.text-4x {
-font-size: 2.5rem !important;
-line-height: 1.1 !important;
-}
+    .overlay {
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.2) 100%);
+    }
 
-.text-2x {
-font-size: 1.5rem !important;
-line-height: 1.3 !important;
-}
+    #mobile-menu-overlay {
+      backdrop-filter: blur(6px);
+      background: rgba(0, 0, 0, 0.55);
+      transition: opacity 0.3s ease;
+    }
 
-/* Fix button overflow */
-.whitespace-nowrap {
-white-space: normal !important;
-text-align: center !important;
-}
+    .fade-in {
+      opacity: 0;
+      transform: translateY(40px);
+      animation: fadeInUp 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    }
 
-/* Fix grid layouts */
-.grid {
-overflow-x: hidden;
-}
+    .fade-in-delay-1 {
+      animation-delay: 0.2s;
+    }
 
-/* Fix mobile padding and margins */
-.px-6, .px-8 {
-padding-left: 1rem !important;
-padding-right: 1rem !important;
-}
+    .fade-in-delay-2 {
+      animation-delay: 0.4s;
+    }
 
-.py-20 {
-padding-top: 3rem !important;
-padding-bottom: 3rem !important;
-}
+    .fade-in-delay-3 {
+      animation-delay: 0.6s;
+    }
 
-/* Fix mobile cards */
-.card-hover {
-margin-bottom: 1rem;
-}
+    .fade-in-delay-4 {
+      animation-delay: 0.8s;
+    }
 
-/* Fix mobile navigation */
-.lg\\:px-8 {
-padding-left: 1rem !important;
-padding-right: 1rem !important;
-}
+    section.bg-white {
+      background-color: #ffffff;
+    }
 
-/* Fix mobile sections spacing */
-section {
-overflow-x: hidden;
-}
+    section.bg-gray-50 {
+      background-color: #f1f1f1;
+    }
 
-/* Fix mobile buttons */
-button {
-word-wrap: break-word;
-hyphens: auto;
-}
+    section.bg-custom-gray {
+      background-color: #E4E4E4;
+    }
 
-/* Fix mobile images */
-img {
-max-width: 100%;
-height: auto;
-}
+    .bg-custom-gray {
+      background-color: #E4E4E4 !important;
+    }
 
-/* Стили для изображений с ошибками загрузки */
-img[data-error-handled="true"] {
-background-color: #f3f4f6;
-border: 1px solid #e5e7eb;
-}
-}
+    /* Mobile optimization and horizontal scroll fix */
+    html,
+    body {
+      overflow-x: hidden;
+      max-width: 100vw;
+      scroll-behavior: smooth;
+    }
 
-/* Additional global mobile fixes */
-@media (max-width: 640px) {
-/* Extra small screens */
-.text-4x {
-font-size: 2rem !important;
-}
+    /* Улучшенные плавные переходы для всех элементов */
+    * {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
 
-.text-2x {
-font-size: 1.25rem !important;
-}
+    /* Исключения для элементов, которые не должны иметь переходы */
+    *:focus,
+    *:focus-visible,
+    .swiper-wrapper,
+    .swiper-slide,
+    img,
+    video,
+    iframe {
+      transition: none;
+    }
 
-.py-20 {
-padding-top: 2rem !important;
-padding-bottom: 2rem !important;
-}
+    /* Плавные переходы для интерактивных элементов */
+    a,
+    button,
+    input,
+    textarea,
+    select {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
 
-.px-8 {
-padding-left: 0.75rem !important;
-padding-right: 0.75rem !important;
-}
-}
+    /* Улучшенные переходы для ховера */
+    a:hover,
+    button:hover {
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
 
-@keyframes fadeInUp {
-to {
-opacity: 1;
-transform: translateY(0);
-}
-}
+    * {
+      box-sizing: border-box;
+    }
 
-.card-hover {
-transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-transform: translateY(0);
-box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-}
+    /* Fix container widths on mobile */
+    @media (max-width: 768px) {
 
-.card-hover:hover {
-transform: translateY(-12px);
-box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
-}
+      .container,
+      .max-w-7xl,
+      .max-w-6xl,
+      .max-w-5xl,
+      .max-w-4xl,
+      .max-w-3xl {
+        max-width: 100% !important;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+      }
 
-/* Отключение анимаций на мобильных устройствах */
-@media (max-width: 768px) {
-.fade-in,
-.fade-in-delay-1,
-.fade-in-delay-2,
-.fade-in-delay-3,
-.fade-in-delay-4 {
-opacity: 1 !important;
-transform: none !important;
-animation: none !important;
-}
+      /* Fix hero section on mobile */
+      .hero-bg {
+        min-height: 100vh;
+        background-attachment: scroll !important;
+      }
 
-.card-hover {
-transition: none !important;
-transform: none !important;
-}
+      /* Fix text sizes on mobile */
+      .text-4x {
+        font-size: 2.5rem !important;
+        line-height: 1.1 !important;
+      }
 
-.card-hover:hover {
-transform: none !important;
-box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
-}
-}
+      .text-2x {
+        font-size: 1.5rem !important;
+        line-height: 1.3 !important;
+      }
 
-.button-hover {
-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-position: relative;
-overflow: hidden;
-transform: translateY(0);
-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
+      /* Fix button overflow */
+      .whitespace-nowrap {
+        white-space: normal !important;
+        text-align: center !important;
+      }
 
-.button-hover::before {
-content: '';
-position: absolute;
-top: 0;
-left: -100%;
-width: 100%;
-height: 100%;
-background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-transition: left 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-}
+      /* Fix grid layouts */
+      .grid {
+        overflow-x: hidden;
+      }
 
-.button-hover:hover::before {
-left: 100%;
-}
+      /* Fix mobile padding and margins */
+      .px-6,
+      .px-8 {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+      }
 
-.button-hover:hover {
-transform: translateY(-3px);
-box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
-}
+      .py-20 {
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+      }
 
-.button-hover:active {
-transform: translateY(-1px);
-box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
-}
+      /* Fix mobile cards */
+      .card-hover {
+        margin-bottom: 1rem;
+      }
 
-.icon-bounce {
-transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
+      /* Fix mobile navigation */
+      .lg\\:px-8 {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+      }
 
-.icon-bounce:hover {
-transform: scale(1.15) rotate(8deg);
-}
+      /* Fix mobile sections spacing */
+      section {
+        overflow-x: hidden;
+      }
 
-/* Плавные переходы для модальных окон */
-.modal-enter {
-opacity: 0;
-transform: scale(0.95);
-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
+      /* Fix mobile buttons */
+      button {
+        word-wrap: break-word;
+        hyphens: auto;
+      }
 
-.modal-enter-active {
-opacity: 1;
-transform: scale(1);
-}
+      /* Fix mobile images */
+      img {
+        max-width: 100%;
+        height: auto;
+      }
 
-.modal-exit {
-opacity: 1;
-transform: scale(1);
-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-}
+      /* Стили для изображений с ошибками загрузки */
+      img[data-error-handled="true"] {
+        background-color: #f3f4f6;
+        border: 1px solid #e5e7eb;
+      }
+    }
 
-.modal-exit-active {
-opacity: 0;
-transform: scale(0.95);
-}
+    /* Additional global mobile fixes */
+    @media (max-width: 640px) {
 
-/* Плавные переходы для мобильного меню */
-.mobile-menu-transition {
-transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-.mobile-menu-hidden {
-transform: translateX(110%);
-}
-.mobile-menu-visible {
-transform: translateX(0%);
-}
+      /* Extra small screens */
+      .text-4x {
+        font-size: 2rem !important;
+      }
 
-/* Плавные переходы для форм */
-input:focus, textarea:focus, select:focus {
-transform: scale(1.02);
-box-shadow: 0 0 0 3px rgba(255, 51, 51, 0.1);
-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
+      .text-2x {
+        font-size: 1.25rem !important;
+      }
 
-/* Плавные переходы для FAQ */
-.faq-answer {
-transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-max-height: 0;
-overflow: hidden;
-}
+      .py-20 {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+      }
 
-.faq-answer.show {
-max-height: 500px;
-}
+      .px-8 {
+        padding-left: 0.75rem !important;
+        padding-right: 0.75rem !important;
+      }
+    }
 
-/* Плавные переходы для навигации */
-nav a {
-position: relative;
-}
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
-nav a::after {
-content: '';
-position: absolute;
-bottom: -2px;
-left: 0;
-width: 0;
-height: 2px;
-background-color: #ff3333;
-transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
+    .card-hover {
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      transform: translateY(0);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    }
 
-nav a:hover::after {
-width: 100%;
-}
+    .card-hover:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+    }
 
-@font-face {
-font-family: 'remixicon';
-src: url('https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.woff2') format('woff2'),
-url('https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.woff') format('woff'),
-url('https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.ttf') format('truetype');
-font-weight: normal;
-font-style: normal;
-font-display: swap;
-}
+    /* Отключение анимаций на мобильных устройствах */
+    @media (max-width: 768px) {
 
-[class^="ri-"], [class*=" ri-"] {
-font-family: 'remixicon', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
-font-style: normal;
--webkit-font-smoothing: antialiased;
--moz-osx-font-smoothing: grayscale;
-display: inline-block;
-font-variant: normal;
-text-transform: none;
-line-height: 1;
-}
+      .fade-in,
+      .fade-in-delay-1,
+      .fade-in-delay-2,
+      .fade-in-delay-3,
+      .fade-in-delay-4 {
+        opacity: 1 !important;
+        transform: none !important;
+        animation: none !important;
+      }
 
-@media (max-width: 768px) {
-.text-4x {
-font-size: 2rem;
-}
+      .card-hover {
+        transition: none !important;
+        transform: none !important;
+      }
 
-.text-2x {
-font-size: 1.25rem;
-}
-}
-</style>
+      .card-hover:hover {
+        transform: none !important;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+      }
+    }
+
+    .button-hover {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+      transform: translateY(0);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .button-hover::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+      transition: left 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .button-hover:hover::before {
+      left: 100%;
+    }
+
+    .button-hover:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .button-hover:active {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+      transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .icon-bounce {
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .icon-bounce:hover {
+      transform: scale(1.15) rotate(8deg);
+    }
+
+    /* Плавные переходы для модальных окон */
+    .modal-enter {
+      opacity: 0;
+      transform: scale(0.95);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .modal-enter-active {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .modal-exit {
+      opacity: 1;
+      transform: scale(1);
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .modal-exit-active {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+
+    /* Плавные переходы для мобильного меню */
+    .mobile-menu-transition {
+      transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .mobile-menu-hidden {
+      transform: translateX(110%);
+    }
+
+    .mobile-menu-visible {
+      transform: translateX(0%);
+    }
+
+    /* Плавные переходы для форм */
+    input:focus,
+    textarea:focus,
+    select:focus {
+      transform: scale(1.02);
+      box-shadow: 0 0 0 3px rgba(255, 51, 51, 0.1);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* Плавные переходы для FAQ */
+    .faq-answer {
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      max-height: 0;
+      overflow: hidden;
+    }
+
+    .faq-answer.show {
+      max-height: 500px;
+    }
+
+    /* Плавные переходы для навигации */
+    nav a {
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: #ff3333;
+      transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    @font-face {
+      font-family: 'remixicon';
+      src: url('https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    [class^="ri-"],
+    [class*=" ri-"] {
+      font-family: 'remixicon', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+      font-style: normal;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      display: inline-block;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+    }
+
+    @media (max-width: 768px) {
+      .text-4x {
+        font-size: 2rem;
+      }
+
+      .text-2x {
+        font-size: 1.25rem;
+      }
+    }
+  </style>
 </head>
+
 <body class="bg-white text-black font-mulish-regular overflow-x-hidden">
-<header class="fixed top-4 left-6 right-6 lg:left-8 lg:right-8 bg-white/80 backdrop-blur-md z-50 shadow-lg rounded-xl">
-<div class="w-full px-6 lg:px-8">
-<div class="flex items-center justify-between h-24 gap-8">
-<div class="flex items-center">
-<img src="images/logo/logo.webp" alt="LOCKOUT TAGOUT Логотип" class="h-20 w-auto py-2" onerror="this.onerror=null; this.style.display='none'; console.warn('Ошибка загрузки логотипа');">
-</div>
-<nav class="hidden lg:flex items-center space-x-8">
-<a href="#solutions" class="font-mulish-regular text-x text-black hover:text-primary transition-colors duration-200">Решения</a>
-<a href="#promo" class="font-mulish-regular text-x text-black hover:text-primary transition-colors duration-200">Акция</a>
-<a href="#projects" class="font-mulish-regular text-x text-black hover:text-primary transition-colors duration-200">Проекты</a>
-<a href="#calculator" class="font-mulish-regular text-x text-black hover:text-primary transition-colors duration-200">Расчет стоимости</a>
-<a href="#how-it-works" class="font-mulish-regular text-x text-black hover:text-primary transition-colors duration-200">Как работает</a>
-<a href="#faq" class="font-mulish-regular text-x text-black hover:text-primary transition-colors duration-200">FAQ</a>
-</nav>
-<div class="hidden lg:flex items-center gap-6">
-<div class="flex flex-col items-end">
-<a href="tel:+74959027759" class="font-mulish-extrabold text-lg text-black hover:text-primary transition-colors duration-200">+7 (495) 902-77-59</a>
-<div class="flex items-center gap-2 text-xs text-gray-700 mt-1">
-<i class="ri-time-line text-primary"></i>
-<span>24/7 поддержка</span>
-</div>
-</div>
-<button data-quick-order data-subject="Заказать консультацию" class="bg-secondary text-white font-mulish-semibold text-sm px-6 py-3 !rounded-button hover:bg-red-700 transition-colors duration-200 button-hover">
-Заказать консультацию
-</button>
-</div>
-<div class="lg:hidden">
-<button id="mobile-menu-button" class="w-6 h-6 flex items-center justify-center">
-<i class="ri-menu-line text-xl"></i>
-</button>
-</div>
-</div>
-</div>
-</header>
-
-<div id="mobile-menu-overlay" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-[60] hidden opacity-0 transition-opacity duration-300"></div>
-<div id="mobile-menu" class="fixed top-0 right-0 min-h-screen w-80 bg-white shadow-2xl z-[70] mobile-menu-transition mobile-menu-hidden overflow-y-auto hidden lg:hidden">
-<div class="p-6">
-<div class="flex items-center justify-between mb-8">
-<img src="images/logo/logo.webp" alt="LOCKOUT TAGOUT Логотип" class="h-16 w-auto">
-<button id="mobile-menu-close" class="w-8 h-8 flex items-center justify-center hover:bg-gray-100 rounded-button transition-colors">
-<i class="ri-close-line text-2xl"></i>
-</button>
-</div>
-<button data-quick-order data-subject="Заказать консультацию" class="w-full bg-secondary text-white font-mulish-semibold text-sm px-6 py-4 !rounded-button hover:bg-red-700 transition-colors duration-200 mb-8 button-hover">
-Заказать консультацию
-</button>
-<nav class="space-y-4">
-<a href="#solutions" class="block font-mulish-semibold text-lg text-black hover:text-primary transition-colors duration-200 py-2">Решения</a>
-<a href="#promo" class="block font-mulish-semibold text-lg text-black hover:text-primary transition-colors duration-200 py-2">Акция</a>
-<a href="#projects" class="block font-mulish-semibold text-lg text-black hover:text-primary transition-colors duration-200 py-2">Проекты</a>
-<a href="#calculator" class="block font-mulish-semibold text-lg text-black hover:text-primary transition-colors duration-200 py-2">Расчет стоимости</a>
-<a href="#how-it-works" class="block font-mulish-semibold text-lg text-black hover:text-primary transition-colors duration-200 py-2">Как работает</a>
-<a href="#faq" class="block font-mulish-semibold text-lg text-black hover:text-primary transition-colors duration-200 py-2">FAQ</a>
-</nav>
-</div>
-</div>
-
-<div id="main-content">
-<!-- Hero Section -->
-<section class="hero-bg-lockout min-h-screen flex items-center relative pt-32 lg:pt-24">
-<div class="overlay absolute inset-0"></div>
-<div class="relative z-10 w-full px-6 lg:px-8">
-<div class="w-full max-w-4xl">
-<div class="mb-2 fade-in">
-<span class="inline-block bg-white/20 text-white font-mulish-semibold text-lg px-4 py-2 rounded-full backdrop-blur-sm">
-<i class="ri-shield-check-line text-xl mr-2"></i>Индивидуальные решения по внедрению <img src="images/logo/logo1White.PNG" alt="LOCKOUT TAGOUT" class="inline h-8 w-auto ml-2">
-</span>
-</div>
-
-<h1 class="font-mulish-extrabold text-4x text-white mb-9 leading-tight fade-in fade-in-delay-1 text-center lg:text-left uppercase">
-<span class="text-red-600">Нулевой травматизм</span>
-<br>
-при обслуживании оборудования — ваша новая <span class="text-red-600">норма</span>
-</h1>
-
-<p class="font-mulish-semibold text-2x text-white mb-12 fade-in fade-in-delay-2 text-center lg:text-left">
-Внедряем систему промышленной безопасности, которая работает. Безопасность — это инвестиция, а не затраты!
-</p>
-
-<div class="flex fade-in fade-in-delay-3 justify-center lg:justify-start">
-<a href="#calculator" class="bg-red-600 text-white font-mulish-extrabold text-lg px-8 py-4 !rounded-button hover:bg-red-700 transition-colors duration-200 button-hover flex items-center justify-center whitespace-nowrap">
-Рассчитать эффективность вложения
-</a>
-</div>
-</div>
-</div>
-</section>
-
-<!-- Solutions Section -->
-<section id="solutions" class="py-20 bg-white">
-<div class="w-full px-6 lg:px-8">
-<div class="max-w-6xl mx-auto">
-<div class="text-center mb-16 fade-in">
-<h2 class="font-mulish-extrabold text-3xl lg:text-4xl text-black mb-4">
-Что происходит на производстве без системы LOTO
-</h2>
-</div>
-
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-<!-- Block 1 -->
-<div class="bg-gray-50 border-l-4 border-red-600 p-8 rounded-lg fade-in">
-<div class="flex items-start gap-4">
-<div class="flex-shrink-0">
-<div class="flex items-center justify-center h-12 w-12 rounded-lg bg-red-600">
-<span class="font-mulish-extrabold text-white text-lg">1</span>
-</div>
-</div>
-<div>
-<h3 class="font-mulish-extrabold text-xl text-black mb-2">70% тяжёлых инцидентов</h3>
-<p class="font-mulish-regular text-gray-700">Происходят при ремонтах и наладке оборудования. Неконтролируемый пуск — главная причина.</p>
-</div>
-</div>
-</div>
-
-<!-- Block 2 -->
-<div class="bg-gray-50 border-l-4 border-red-600 p-8 rounded-lg fade-in">
-<div class="flex items-start gap-4">
-<div class="flex-shrink-0">
-<div class="flex items-center justify-center h-12 w-12 rounded-lg bg-red-600">
-<span class="font-mulish-extrabold text-white text-lg">2</span>
-</div>
-</div>
-<div>
-<h3 class="font-mulish-extrabold text-xl text-black mb-2">Человеческий фактор</h3>
-<p class="font-mulish-regular text-gray-700">Оборудование запускают «по ошибке» или «по привычке». Без системы контроля — это неизбежно.</p>
-</div>
-</div>
-</div>
-
-<!-- Block 3 -->
-<div class="bg-gray-50 border-l-4 border-red-600 p-8 rounded-lg fade-in">
-<div class="flex items-start gap-4">
-<div class="flex-shrink-0">
-<div class="flex items-center justify-center h-12 w-12 rounded-lg bg-red-600">
-<span class="font-mulish-extrabold text-white text-lg">3</span>
-</div>
-</div>
-<div>
-<h3 class="font-mulish-extrabold text-xl text-black mb-2">Ответственность ложится на людей</h3>
-<p class="font-mulish-regular text-gray-700">На ОТ, инженеров и руководство. Штрафы, судебные разбирательства, потеря репутации.</p>
-</div>
-</div>
-</div>
-
-<!-- Block 4 -->
-<div class="bg-gray-50 border-l-4 border-red-600 p-8 rounded-lg fade-in">
-<div class="flex items-start gap-4">
-<div class="flex-shrink-0">
-<div class="flex items-center justify-center h-12 w-12 rounded-lg bg-red-600">
-<span class="font-mulish-extrabold text-white text-lg">4</span>
-</div>
-</div>
-<div>
-<h3 class="font-mulish-extrabold text-xl text-black mb-2">Один инцидент дороже всей системы</h3>
-<p class="font-mulish-regular text-gray-700">Стоимость инцидента включает траты на жизнь, штрафы, простой и восстановление. Вложение в LOTO — инвестиция.</p>
-</div>
-</div>
-</div>
-</div>
-
-<div class="text-center mt-16 fade-in">
-<div class="border-l-4 border-red-600 pl-8 py-8 bg-transparent">
-<p class="font-mulish-extrabold text-2xl lg:text-3xl text-black">
-LOCKOUT TAGOUT — это не опция.<br>
-<span class="text-red-600">Это защита персонала, оборудования, производства.</span>
-</p>
-</div>
-</div>
-
-</div>
-</div>
-</section>
-
-<!-- Promo Section -->
-<section id="promo" class="py-20 bg-gray-50">
-<div class="w-full px-6 lg:px-8">
-<div class="max-w-5xl mx-auto">
-<div class="text-center mb-12 fade-in">
-<h2 class="font-mulish-extrabold text-3xl lg:text-4xl text-black">
-Попробуйте LOCKOUT TAGOUT на практике — без лишних затрат
-</h2>
-</div>
-
-<div class="bg-white rounded-2xl shadow-lg overflow-hidden fade-in">
-<div class="relative">
-<img src="images/backgrounds/inv1.jpg" alt="Акция LOCKOUT TAGOUT" class="w-full h-64 md:h-80 object-cover">
-<div class="absolute inset-0 bg-black/55"></div>
-<div class="absolute inset-0 flex items-center justify-center p-6 text-center">
-<div>
-<p class="font-mulish-extrabold text-2xl md:text-3xl text-white">
-Купи 10 блокираторов — получи 1 замок за 1 рубль
-</p>
-<p class="font-mulish-regular text-sm text-white/80 mt-3">
-* акция ограничена по времени и по варианту блокираторов
-</p>
-</div>
-</div>
-</div>
-
-<div class="p-8 text-center">
-<p class="font-mulish-regular text-gray-700 text-lg mb-6">
-Отличный вариант для пилотного участка или тестирования системы на объекте
-</p>
-<a href="#pilot-kit" class="bg-red-600 text-white font-mulish-extrabold text-lg px-8 py-4 !rounded-button hover:bg-red-700 transition-colors duration-200 button-hover inline-flex items-center justify-center">
-Получить комплект для пилота
-</a>
-</div>
-</div>
-
-</div>
-</div>
-</section>
-
-<!-- How it Works Section -->
-<section id="how-it-works" class="py-20 bg-gray-50">
-<div class="w-full px-6 lg:px-8">
-<div class="max-w-6xl mx-auto">
-<div class="text-center mb-16 fade-in">
-<h2 class="font-mulish-extrabold text-3xl lg:text-4xl text-black mb-4">
-Как работает система LOCKOUT TAGOUT
-</h2>
-</div>
-
-<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-<div class="flex flex-col items-center text-center fade-in fade-in-delay-1">
-<div class="w-20 h-20 bg-red-600 text-white rounded-full flex items-center justify-center font-mulish-extrabold text-2xl mb-4">
-1
-</div>
-<h3 class="font-mulish-extrabold text-lg text-black mb-2">Разблокировка</h3>
-<p class="font-mulish-regular text-gray-600 text-sm">
-Отключаем энергию и изолируем все источники питания оборудования
-</p>
-</div>
-
-<div class="flex flex-col items-center text-center fade-in fade-in-delay-2">
-<div class="w-20 h-20 bg-red-600 text-white rounded-full flex items-center justify-center font-mulish-extrabold text-2xl mb-4">
-2
-</div>
-<h3 class="font-mulish-extrabold text-lg text-black mb-2">Блокировка</h3>
-<p class="font-mulish-regular text-gray-600 text-sm">
-Навешиваем персональные замки каждого работника и теги с информацией
-</p>
-</div>
-
-<div class="flex flex-col items-center text-center fade-in fade-in-delay-3">
-<div class="w-20 h-20 bg-red-600 text-white rounded-full flex items-center justify-center font-mulish-extrabold text-2xl mb-4">
-3
-</div>
-<h3 class="font-mulish-extrabold text-lg text-black mb-2">Проверка</h3>
-<p class="font-mulish-regular text-gray-600 text-sm">
-Проверяем отсутствие остаточной энергии и готовность к работе
-</p>
-</div>
-
-<div class="flex flex-col items-center text-center fade-in fade-in-delay-4">
-<div class="w-20 h-20 bg-red-600 text-white rounded-full flex items-center justify-center font-mulish-extrabold text-2xl mb-4">
-4
-</div>
-<h3 class="font-mulish-extrabold text-lg text-black mb-2">Разблокировка</h3>
-<p class="font-mulish-regular text-gray-600 text-sm">
-После работы снимаем замки только авторизованными лицами в строгом порядке
-</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<!-- Cases Section -->
-<section id="projects" class="py-20 bg-gray-50">
-<div class="w-full px-6 lg:px-8">
-<div class="max-w-6xl mx-auto">
-<div class="text-center mb-16 fade-in">
-<h2 class="font-mulish-extrabold text-3xl lg:text-4xl text-black mb-4">
-Кейсы внедрения LOCKOUT TAGOUT
-</h2>
-<p class="font-mulish-regular text-gray-600 text-lg max-w-3xl mx-auto">
-Коротко о том, что происходило на объектах и к чему привело внедрение системы.
-</p>
-</div>
-
-<div class="grid grid-cols-1 gap-8 mb-12">
-<!-- Case 1 -->
-<div class="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm fade-in">
-<h3 class="font-mulish-extrabold text-2xl text-black mb-6">Кейс: внедрение LOTO на энергопредприятии</h3>
-<ul class="space-y-4">
-<li class="flex gap-3">
-<span class="font-mulish-extrabold text-red-600">Что случилось:</span>
-<span class="font-mulish-regular text-gray-700">нужна была быстрая и безопасная организация ремонтов при большом объёме устаревшего оборудования и дефиците времени у персонала.</span>
-</li>
-<li class="flex gap-3">
-<span class="font-mulish-extrabold text-red-600">Что сделали:</span>
-<span class="font-mulish-regular text-gray-700">провели аудит оборудования, пересобрали перечень блокираторов, разработали документацию и процедуры, обучили персонал, поставили и смонтировали оборудование, сформировали LOTO‑посты.</span>
-</li>
-<li class="flex gap-3">
-<span class="font-mulish-extrabold text-red-600">Чем закончилось:</span>
-<span class="font-mulish-regular text-gray-700">проекты завершены в срок, при минимальной вовлечённости оперативного и ремонтного персонала.</span>
-</li>
-<li class="flex gap-3">
-<span class="font-mulish-extrabold text-red-600">Какие риски сняли:</span>
-<span class="font-mulish-regular text-gray-700">исключили несанкционированные пуски, снизили риски при ремонтах и пуско‑наладке, стандартизировали процедуры и ответственность.</span>
-</li>
-</ul>
-</div>
-</div>
-
-<div class="text-center fade-in">
-<a href="#case-fit" class="bg-red-600 text-white font-mulish-extrabold text-lg px-8 py-4 !rounded-button hover:bg-red-700 transition-colors duration-200 button-hover inline-flex items-center justify-center">
-Понять, подходит ли это для нашего предприятия
-</a>
-</div>
-
-</div>
-</div>
-</section>
-
-<!-- Objection Handling Section -->
-<section id="objections" class="py-20 bg-white">
-<div class="w-full px-6 lg:px-8">
-<div class="max-w-6xl mx-auto">
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-<div class="bg-gray-50 border border-gray-200 rounded-2xl p-8 fade-in">
-<h3 class="font-mulish-extrabold text-2xl text-black mb-6">«Мы пока подождём…»</h3>
-<ul class="space-y-4">
-<li class="flex gap-3">
-<i class="ri-close-circle-line text-red-600 text-xl mt-1"></i>
-<span class="font-mulish-regular text-gray-700">Сейчас не до этого — ремонты горят.</span>
-</li>
-<li class="flex gap-3">
-<i class="ri-close-circle-line text-red-600 text-xl mt-1"></i>
-<span class="font-mulish-regular text-gray-700">Мы и так всё контролируем вручную.</span>
-</li>
-<li class="flex gap-3">
-<i class="ri-close-circle-line text-red-600 text-xl mt-1"></i>
-<span class="font-mulish-regular text-gray-700">Сначала разберёмся, потом внедрим.</span>
-</li>
-</ul>
-</div>
-
-<div class="fade-in">
-<div class="border-l-4 border-red-600 pl-8 py-8">
-<p class="font-mulish-extrabold text-2xl lg:text-3xl text-black">
-Пока «ждём», риск остаётся тем же.<br>
-<span class="text-red-600">LOTO убирает его уже сейчас.</span>
-</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<!-- Calculator Section -->
-<section id="calculator" class="py-20 bg-gray-50">
-<div class="w-full px-6 lg:px-8">
-<div class="max-w-5xl mx-auto">
-<div class="text-center mb-12 fade-in">
-<h2 class="font-mulish-extrabold text-3xl lg:text-4xl text-black">
-Предварительный расчёт внедрения системы LOCKOUT TAGOUT под ваше предприятие
-</h2>
-</div>
-
-<div class="bg-white rounded-2xl shadow-lg p-8 lg:p-10 fade-in">
-<form class="grid grid-cols-1 md:grid-cols-2 gap-6" action="send_email.php" method="POST">
-<input type="hidden" name="form_type" value="main">
-
-<div>
-<label for="calc-name" class="block text-sm font-mulish-semibold text-gray-700 mb-2">Имя</label>
-<input id="calc-name" name="name" type="text" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-red-600 focus:border-red-600" placeholder="Введите имя">
-</div>
-
-<div>
-<label for="calc-phone" class="block text-sm font-mulish-semibold text-gray-700 mb-2">Телефон</label>
-<input id="calc-phone" name="phone" type="tel" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-red-600 focus:border-red-600" placeholder="+7 (___) ___-__-__">
-</div>
-
-<div>
-<label for="calc-email" class="block text-sm font-mulish-semibold text-gray-700 mb-2">Email</label>
-<input id="calc-email" name="email" type="email" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-red-600 focus:border-red-600" placeholder="email@company.ru">
-</div>
-
-<div>
-<label for="calc-company" class="block text-sm font-mulish-semibold text-gray-700 mb-2">Компания</label>
-<input id="calc-company" name="company" type="text" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-red-600 focus:border-red-600" placeholder="Название компании">
-</div>
-
-<div>
-<label for="calc-position" class="block text-sm font-mulish-semibold text-gray-700 mb-2">Должность</label>
-<input id="calc-position" name="position" type="text" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-red-600 focus:border-red-600" placeholder="Ваша должность">
-</div>
-
-<div class="md:col-span-2">
-<button type="submit" class="w-full bg-red-600 text-white font-mulish-extrabold text-lg px-8 py-4 !rounded-button hover:bg-red-700 transition-colors duration-200 button-hover">
-Получить расчёт и рекомендации
-</button>
-<p class="text-xs text-gray-500 mt-3 text-center">
-Никаких КП и продаж — сначала разбираемся, подойдёт ли решение
-</p>
-</div>
-</form>
-</div>
-
-</div>
-</div>
-</section>
-
-<!-- Application Section -->
-<section id="application" class="py-20 lg:py-32 bg-white">
-<div class="w-full px-6 lg:px-8">
-<div class="max-w-6xl mx-auto">
-<div class="text-center mb-16 fade-in">
-<h2 class="font-mulish-extrabold text-3xl lg:text-4xl text-black mb-4">
-Применение LOCKOUT TAGOUT
-</h2>
-</div>
-
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
-<!-- Left Column - Text Content -->
-<div class="fade-in">
-<div class="mb-8">
-<h3 class="font-mulish-extrabold text-2xl text-black mb-4">Система Lockout Tagout</h3>
-<p class="font-mulish-regular text-gray-700 leading-relaxed mb-4">
-Система Lockout Tagout — критически важный элемент промышленных систем безопасности. Она предотвращает непреднамеренный запуск оборудования во время технического обслуживания или ремонта, защищая сотрудников от потенциальных травм и создавая более безопасную рабочую среду.
-</p>
-<p class="font-mulish-regular text-gray-700 leading-relaxed">
-Основная задача LOTO — предотвратить непреднамеренный доступ к электропитанию и снабжению оборудования опасными средами во время проведения технических работ, защита персонала от механических и электрических рисков. Внедрение эффективных процедур LOTO может снизить количество аварий на предприятиях до 25-50%. Это особенно актуально для производственных компаний, где эксплуатация сложных машин требует повышенного уровня безопасности.
-</p>
-</div>
-
-<div class="mb-8">
-<h3 class="font-mulish-extrabold text-xl text-black mb-4">Система LOCKOUT TAGOUT применяется на всех этапах жизненного цикла оборудования, включая:</h3>
-<ul class="space-y-2">
-<li class="flex items-start gap-3">
-<i class="ri-checkbox-circle-fill text-red-600 text-xl flex-shrink-0 mt-1"></i>
-<span class="font-mulish-regular text-gray-700">техническое обслуживание и регламентные работы;</span>
-</li>
-<li class="flex items-start gap-3">
-<i class="ri-checkbox-circle-fill text-red-600 text-xl flex-shrink-0 mt-1"></i>
-<span class="font-mulish-regular text-gray-700">планово-предупредительный ремонт (ППР), замену узлов;</span>
-</li>
-<li class="flex items-start gap-3">
-<i class="ri-checkbox-circle-fill text-red-600 text-xl flex-shrink-0 mt-1"></i>
-<span class="font-mulish-regular text-gray-700">пуско-наладочные работы;</span>
-</li>
-<li class="flex items-start gap-3">
-<i class="ri-checkbox-circle-fill text-red-600 text-xl flex-shrink-0 mt-1"></i>
-<span class="font-mulish-regular text-gray-700">очистку и диагностику оборудования;</span>
-</li>
-<li class="flex items-start gap-3">
-<i class="ri-checkbox-circle-fill text-red-600 text-xl flex-shrink-0 mt-1"></i>
-<span class="font-mulish-regular text-gray-700">аварийные и внеплановые работы.</span>
-</li>
-</ul>
-</div>
-</div>
-
-<!-- Right Column - Industries and Image -->
-<div class="fade-in fade-in-delay-1">
-<div class="mb-8">
-<h3 class="font-mulish-extrabold text-xl text-black mb-4">LOCKOUT TAGOUT широко используется в следующих отраслях:</h3>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-<div class="flex items-start gap-2">
-<i class="ri-arrow-right-s-fill text-red-600 text-xl flex-shrink-0"></i>
-<span class="font-mulish-regular text-gray-700">промышленное производство;</span>
-</div>
-<div class="flex items-start gap-2">
-<i class="ri-arrow-right-s-fill text-red-600 text-xl flex-shrink-0"></i>
-<span class="font-mulish-regular text-gray-700">энергетика;</span>
-</div>
-<div class="flex items-start gap-2">
-<i class="ri-arrow-right-s-fill text-red-600 text-xl flex-shrink-0"></i>
-<span class="font-mulish-regular text-gray-700">нефтегазовая и химическая промышленность;</span>
-</div>
-<div class="flex items-start gap-2">
-<i class="ri-arrow-right-s-fill text-red-600 text-xl flex-shrink-0"></i>
-<span class="font-mulish-regular text-gray-700">горнодобывающая отрасль;</span>
-</div>
-<div class="flex items-start gap-2">
-<i class="ri-arrow-right-s-fill text-red-600 text-xl flex-shrink-0"></i>
-<span class="font-mulish-regular text-gray-700">металлургия;</span>
-</div>
-<div class="flex items-start gap-2">
-<i class="ri-arrow-right-s-fill text-red-600 text-xl flex-shrink-0"></i>
-<span class="font-mulish-regular text-gray-700">пищевая и фармацевтическая промышленность;</span>
-</div>
-<div class="flex items-start gap-2">
-<i class="ri-arrow-right-s-fill text-red-600 text-xl flex-shrink-0"></i>
-<span class="font-mulish-regular text-gray-700">складские и логистические комплексы.</span>
-</div>
-</div>
-</div>
-
-<div class="bg-custom-gray rounded-2xl p-6">
-<p class="font-mulish-regular text-gray-700 leading-relaxed">
-Система LOCKOUT TAGOUT (ЛОТО) применяется как дополнительный инструмент управления рисками и <span class="font-mulish-semibold text-black">интегрируется в существующие системы организации ремонтных и эксплуатационных работ</span>, действующие на территории Российской Федерации. ЛОТО не заменяет регламентированные процедуры, а усиливает их, обеспечивая физическую изоляцию источников опасной энергии и предотвращая человеческий фактор.
-</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<!-- CTA Section -->
-<section class="py-20 bg-white">
-<div class="w-full px-6 lg:px-8">
-<div class="max-w-4xl mx-auto bg-gradient-to-r from-red-600 to-red-700 rounded-2xl p-12 text-center fade-in">
-<h2 class="font-mulish-extrabold text-3xl lg:text-4xl text-white mb-4">
-Готовы внедрить безопасность?
-</h2>
-<p class="font-mulish-semibold text-xl text-white mb-8">
-Консультация экспертов совершенно бесплатна
-</p>
-<div class="flex flex-col sm:flex-row gap-4 justify-center">
-<button data-quick-order data-subject="Записаться на консультацию" class="bg-white text-red-600 font-mulish-extrabold text-lg px-8 py-4 !rounded-button hover:bg-gray-100 transition-colors duration-200 button-hover">
-Записаться на консультацию
-</button>
-<button data-quick-order data-subject="Позвонить прямо сейчас" class="bg-red-600 text-white font-mulish-extrabold text-lg px-8 py-4 !rounded-button hover:bg-red-700 transition-colors duration-200 button-hover">
-Позвонить прямо сейчас
-</button>
-</div>
-</div>
-</div>
-</section>
-
-<!-- About Section -->
-<section id="about" class="py-20 lg:py-32 bg-cover bg-center bg-no-repeat relative" style="background-image: url('images/backgrounds/back2.webp');">
-<div class="absolute inset-0 bg-black/60"></div>
-<div class="w-full px-6 lg:px-8 relative z-10">
-<div class="max-w-6xl mx-auto">
-<div class="text-center mb-16 fade-in">
-<h2 class="font-mulish-extrabold text-3xl lg:text-4xl text-white mb-4">
-<span class="text-white">О</span> <span class="text-red-600">нас</span>
-</h2>
-<p class="font-mulish-regular text-white text-lg">
-Познакомьтесь с компанией, которая делает производство безопаснее
-</p>
-</div>
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-<!-- Left Side - Image -->
-<div class="fade-in order-2 lg:order-1">
-<div class="relative">
-<img src="images/backgrounds/per.jpg" alt="О компании" class="rounded-2xl shadow-2xl w-full h-auto object-cover" onerror="this.onerror=null; this.style.display='none'; console.warn('Ошибка загрузки изображения О нас');">
-<div class="absolute -bottom-6 -right-6 bg-red-600 text-white p-6 rounded-xl shadow-xl hidden lg:block">
-<div class="text-center">
-<div class="font-mulish-extrabold text-4xl mb-2">15+</div>
-<div class="font-mulish-semibold text-sm">Лет опыта</div>
-</div>
-</div>
-</div>
-</div>
-
-<!-- Right Side - Content -->
-<div class="fade-in fade-in-delay-1 order-1 lg:order-2">
-<h3 class="font-mulish-extrabold text-4xl lg:text-5xl text-white mb-6">
-Эксперты в области промышленной безопасности
-</h3>
-<p class="font-mulish-regular text-white text-xl mb-6">
-Мы специализируемся на внедрении систем LOCKOUT TAGOUT для предприятий любого масштаба. Наша миссия — обеспечить безопасность каждого работника на производстве.
-</p>
-<div class="space-y-4 mb-8">
-<div class="flex items-start gap-3">
-<i class="ri-shield-check-line text-red-600 text-2xl mt-1"></i>
-<div>
-<h3 class="font-mulish-semibold text-lg text-white mb-1">Сертифицированные решения</h3>
-<p class="font-mulish-regular text-gray-200 text-sm">Все наше оборудование соответствует международным стандартам ISO и OSHA</p>
-</div>
-</div>
-<div class="flex items-start gap-3">
-<i class="ri-team-line text-red-600 text-2xl mt-1"></i>
-<div>
-<h3 class="font-mulish-semibold text-lg text-white mb-1">Квалифицированная команда</h3>
-<p class="font-mulish-regular text-gray-200 text-sm">Более 50 специалистов с опытом работы в промышленной безопасности</p>
-</div>
-</div>
-<div class="flex items-start gap-3">
-<i class="ri-line-chart-line text-red-600 text-2xl mt-1"></i>
-<div>
-<h3 class="font-mulish-semibold text-lg text-white mb-1">Доказанная эффективность</h3>
-<p class="font-mulish-regular text-gray-200 text-sm">Снижение травматизма на 95% у наших клиентов в первый год работы</p>
-</div>
-</div>
-</div>
-<div class="flex flex-col sm:flex-row gap-4">
-<button data-quick-order data-subject="Узнать больше" class="bg-red-600 text-white font-mulish-extrabold text-lg px-8 py-4 !rounded-button hover:bg-red-700 transition-colors duration-200 button-hover">
-Узнать больше
-</button>
-<button data-quick-order data-subject="Наши проекты" class="bg-white border-2 border-gray-300 text-black font-mulish-extrabold text-lg px-8 py-4 !rounded-button hover:bg-gray-50 transition-colors duration-200 button-hover">
-Наши проекты
-</button>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<!-- Stats Section -->
-<section class="py-20 bg-custom-gray">
-<div class="w-full px-6 lg:px-8">
-<div class="max-w-6xl mx-auto">
-<div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
-<div class="text-center fade-in">
-<div class="font-mulish-extrabold text-4xl lg:text-5xl text-red-600 mb-2">500+</div>
-<div class="font-mulish-semibold text-gray-700">Предприятий</div>
-</div>
-<div class="text-center fade-in fade-in-delay-1">
-<div class="font-mulish-extrabold text-4xl lg:text-5xl text-red-600 mb-2">30К+</div>
-<div class="font-mulish-semibold text-gray-700">Обученных сотрудников</div>
-</div>
-<div class="text-center fade-in fade-in-delay-2">
-<div class="font-mulish-extrabold text-4xl lg:text-5xl text-red-600 mb-2">95%</div>
-<div class="font-mulish-semibold text-gray-700">Снижение травматизма</div>
-</div>
-<div class="text-center fade-in fade-in-delay-3">
-<div class="font-mulish-extrabold text-4xl lg:text-5xl text-red-600 mb-2">15+</div>
-<div class="font-mulish-semibold text-gray-700">Лет опыта</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<!-- FAQ Section -->
-<section id="faq" class="py-20 bg-white">
-<div class="w-full px-6 lg:px-8">
-<div class="max-w-5xl mx-auto">
-<div class="text-center mb-12 fade-in">
-<h2 class="font-mulish-extrabold text-3xl lg:text-4xl text-black">
-FAQ
-</h2>
-</div>
-
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-<div class="border border-gray-200 rounded-xl p-6">
-<button class="w-full flex items-center justify-between text-left" data-faq-toggle>
-<span class="font-mulish-extrabold text-xl lg:text-2xl text-black">Сколько стоит внедрение?</span>
-<i class="ri-add-line text-3xl text-red-600"></i>
-</button>
-<div class="faq-answer mt-4 text-lg text-gray-700 font-mulish-regular">
-Точная цена определяется после анализа объекта.
-</div>
-</div>
-
-<div class="border border-gray-200 rounded-xl p-6">
-<button class="w-full flex items-center justify-between text-left" data-faq-toggle>
-<span class="font-mulish-extrabold text-xl lg:text-2xl text-black">Можно ли внедрять поэтапно?</span>
-<i class="ri-add-line text-3xl text-red-600"></i>
-</button>
-<div class="faq-answer mt-4 text-lg text-gray-700 font-mulish-regular">
-Да. Можно начать с пилотного цеха, участка.
-</div>
-</div>
-
-<div class="border border-gray-200 rounded-xl p-6">
-<button class="w-full flex items-center justify-between text-left" data-faq-toggle>
-<span class="font-mulish-extrabold text-xl lg:text-2xl text-black">Насколько быстро это делается?</span>
-<i class="ri-add-line text-3xl text-red-600"></i>
-</button>
-<div class="faq-answer mt-4 text-lg text-gray-700 font-mulish-regular">
-От 70 дней — срок варьируется в зависимости от масштаба и специфики предприятия.
-</div>
-</div>
-
-<div class="border border-gray-200 rounded-xl p-6">
-<button class="w-full flex items-center justify-between text-left" data-faq-toggle>
-<span class="font-mulish-extrabold text-xl lg:text-2xl text-black">Сотрудники будут саботировать?</span>
-<i class="ri-add-line text-3xl text-red-600"></i>
-</button>
-<div class="faq-answer mt-4 text-lg text-gray-700 font-mulish-regular">
-Мы обеспечиваем грамотное внедрение: проводим обучение, помогаем его освоить, доводим до персонала как работать с системой и зачем это нужно. Даем рекомендации руководству Заказчика для вовлечения персонала в процесс.
-</div>
-</div>
-</div>
-
-</div>
-</div>
-</section>
-
-<!-- Final CTA Section -->
-<section id="final-cta" class="py-20 bg-gray-50">
-<div class="w-full px-6 lg:px-8">
-<div class="max-w-5xl mx-auto">
-<div class="bg-white rounded-2xl shadow-lg p-10 text-center fade-in">
-<h2 class="font-mulish-extrabold text-3xl lg:text-4xl text-black mb-6">
-Начнём с безопасного шага — без риска и лишних затрат.
-</h2>
-<form id="quick-order-form-inline" class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left" action="send_email.php" method="POST">
-<input type="hidden" name="form_type" value="quick">
-<input type="hidden" name="quick-subject" value="Оставить заявку">
-
-<div>
-<label for="cta-phone" class="block font-mulish-semibold text-sm text-gray-700 mb-2">Телефон *</label>
-<input type="tel" id="cta-phone" name="quick-phone" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 font-mulish-regular">
-</div>
-<div>
-<label for="cta-email" class="block font-mulish-semibold text-sm text-gray-700 mb-2">Email *</label>
-<input type="email" id="cta-email" name="quick-email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 font-mulish-regular">
-</div>
-<div>
-<label for="cta-name" class="block font-mulish-semibold text-sm text-gray-700 mb-2">Имя</label>
-<input type="text" id="cta-name" name="quick-name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 font-mulish-regular">
-</div>
-<div>
-<label for="cta-company" class="block font-mulish-semibold text-sm text-gray-700 mb-2">Компания</label>
-<input type="text" id="cta-company" name="quick-company" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 font-mulish-regular">
-</div>
-<div class="md:col-span-2">
-<label for="cta-position" class="block font-mulish-semibold text-sm text-gray-700 mb-2">Должность</label>
-<input type="text" id="cta-position" name="quick-position" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 font-mulish-regular">
-</div>
-
-<div class="md:col-span-2 flex items-start gap-3">
-<input type="checkbox" id="cta-privacy-consent" name="privacy-consent" required class="mt-1 w-4 h-4 text-red-600 border-gray-300 rounded focus:ring-red-500">
-<label for="cta-privacy-consent" class="text-sm text-gray-700 font-mulish-regular">
-Я согласен(а) на <a href="https://oilspill-solutions.ru/politika-v-otnoshenii-obrabotki-personalnykh-dannykh" target="_blank" class="text-red-600 hover:text-red-700 underline">обработку персональных данных</a> и принимаю условия <a href="https://oilspill-solutions.ru/polzovatelskoe-soglashenie" target="_blank" class="text-red-600 hover:text-red-700 underline">пользовательского соглашения</a>
-</label>
-</div>
-
-<div class="md:col-span-2">
-<div class="g-recaptcha" data-sitekey="6Lex5x4sAAAAAIokTjf9eT9E6AcO0lGhx_0nBrBR"></div>
-</div>
-
-<div class="md:col-span-2">
-<button type="submit" class="w-full bg-red-600 text-white font-mulish-extrabold text-lg px-10 py-4 !rounded-button hover:bg-red-700 transition-colors duration-200 button-hover">
-Оставить заявку
-</button>
-</div>
-</form>
-</div>
-</div>
-</div>
-</section>
-
-<!-- Footer -->
-<footer class="bg-black text-white py-12">
-<div class="w-full px-6 lg:px-8">
-<div class="max-w-6xl mx-auto">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-<div>
-<img src="images/logo/logo.webp" alt="LOCKOUT TAGOUT" class="h-16 w-auto mb-4">
-<p class="font-mulish-regular text-gray-400 text-sm">
-Система предотвращения травматизма при обслуживании оборудования
-</p>
-</div>
-<div>
-<h4 class="font-mulish-extrabold text-lg mb-4">Решения</h4>
-<ul class="space-y-2 font-mulish-regular text-sm text-gray-400">
-<li><a href="#solutions" class="hover:text-white transition">Решения</a></li>
-<li><a href="#promo" class="hover:text-white transition">Акция</a></li>
-<li><a href="#projects" class="hover:text-white transition">Проекты</a></li>
-</ul>
-</div>
-<div>
-<h4 class="font-mulish-extrabold text-lg mb-4">Информация</h4>
-<ul class="space-y-2 font-mulish-regular text-sm text-gray-400">
-<li><a href="#calculator" class="hover:text-white transition">Расчет стоимости</a></li>
-<li><a href="#how-it-works" class="hover:text-white transition">Как работает</a></li>
-<li><a href="#faq" class="hover:text-white transition">FAQ</a></li>
-</ul>
-</div>
-<div>
-<h4 class="font-mulish-extrabold text-lg mb-4">Контакты</h4>
-<p class="font-mulish-semibold text-white mb-2">+7 (495) 902-77-59</p>
-<p class="font-mulish-regular text-gray-400 text-sm">info@lockout-tagout.ru</p>
-<p class="font-mulish-regular text-gray-400 text-sm mt-4">Пн-Пт: 09:00-18:00</p>
-</div>
-</div>
-<div class="border-t border-gray-800 pt-8">
-<div class="flex flex-col md:flex-row justify-between items-center gap-4">
-<p class="font-mulish-regular text-gray-400 text-sm">
-© 2024 LOCKOUT TAGOUT. Все права защищены.
-</p>
-<div class="flex gap-6 text-sm">
-<a href="https://oilspill-solutions.ru/politika-v-otnoshenii-obrabotki-personalnykh-dannykh" target="_blank" class="font-mulish-regular text-gray-400 hover:text-white transition">
-Политика конфиденциальности
-</a>
-<a href="https://oilspill-solutions.ru/polzovatelskoe-soglashenie" target="_blank" class="font-mulish-regular text-gray-400 hover:text-white transition">
-Пользовательское соглашение
-</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</footer>
-</div>
-
-<!-- Quick Order Modal -->
-<div id="quick-order-modal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-[100] hidden flex items-center justify-center p-4">
-<div class="bg-white rounded-2xl max-w-md w-full max-h-[90vh] overflow-y-auto shadow-2xl transform transition-all">
-<div class="p-6 lg:p-8">
-<div class="flex items-center justify-between mb-6">
-<h3 class="font-mulish-extrabold text-2xl text-black" id="modal-title">Оставить заявку</h3>
-<button id="close-modal" class="w-10 h-10 flex items-center justify-center hover:bg-gray-100 rounded-full transition-colors">
-<i class="ri-close-line text-2xl text-gray-600"></i>
-</button>
-</div>
-<form id="quick-order-form" class="space-y-4">
-<input type="hidden" id="quick-subject" name="quick-subject" value="">
-<div>
-<label for="quick-phone" class="block font-mulish-semibold text-sm text-gray-700 mb-2">Телефон *</label>
-<input type="tel" id="quick-phone" name="quick-phone" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 font-mulish-regular">
-</div>
-<div>
-<label for="quick-email" class="block font-mulish-semibold text-sm text-gray-700 mb-2">Email *</label>
-<input type="email" id="quick-email" name="quick-email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 font-mulish-regular">
-</div>
-<div>
-<label for="quick-name" class="block font-mulish-semibold text-sm text-gray-700 mb-2">Имя</label>
-<input type="text" id="quick-name" name="quick-name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 font-mulish-regular">
-</div>
-<div>
-<label for="quick-company" class="block font-mulish-semibold text-sm text-gray-700 mb-2">Компания</label>
-<input type="text" id="quick-company" name="quick-company" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 font-mulish-regular">
-</div>
-<div>
-<label for="quick-position" class="block font-mulish-semibold text-sm text-gray-700 mb-2">Должность</label>
-<input type="text" id="quick-position" name="quick-position" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 font-mulish-regular">
-</div>
-<div class="flex items-start gap-3">
-<input type="checkbox" id="privacy-consent" name="privacy-consent" required class="mt-1 w-4 h-4 text-red-600 border-gray-300 rounded focus:ring-red-500">
-<label for="privacy-consent" class="text-sm text-gray-700 font-mulish-regular">
-Я согласен(а) на <a href="https://oilspill-solutions.ru/politika-v-otnoshenii-obrabotki-personalnykh-dannykh" target="_blank" class="text-red-600 hover:text-red-700 underline">обработку персональных данных</a> и принимаю условия <a href="https://oilspill-solutions.ru/polzovatelskoe-soglashenie" target="_blank" class="text-red-600 hover:text-red-700 underline">пользовательского соглашения</a>
-</label>
-</div>
-<div class="g-recaptcha" data-sitekey="6Lex5x4sAAAAAIokTjf9eT9E6AcO0lGhx_0nBrBR"></div>
-<button type="submit" class="w-full bg-red-600 text-white font-mulish-extrabold text-lg px-8 py-4 rounded-lg hover:bg-red-700 transition-colors duration-200 button-hover">
-Отправить заявку
-</button>
-</form>
-<div id="form-message" class="hidden mt-4 p-4 rounded-lg"></div>
-</div>
-</div>
-</div>
-
-<!-- Mobile Menu Toggle -->
-<script>
-const mobileMenuButton = document.getElementById('mobile-menu-button');
-const mobileMenu = document.getElementById('mobile-menu');
-const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
-const mobileMenuClose = document.getElementById('mobile-menu-close');
-
-function openMenu() {
-mobileMenu.classList.remove('hidden');
-mobileMenu.classList.remove('mobile-menu-hidden');
-// ensure start position for transition
-mobileMenu.classList.add('mobile-menu-hidden');
-// force reflow before sliding in
-void mobileMenu.offsetWidth;
-requestAnimationFrame(() => {
-mobileMenu.classList.add('mobile-menu-visible');
-});
-mobileMenuOverlay.classList.remove('hidden');
-mobileMenuOverlay.classList.remove('opacity-0');
-document.body.style.overflow = 'hidden';
-}
-
-function closeMenu() {
-mobileMenu.classList.remove('mobile-menu-visible');
-mobileMenu.classList.add('mobile-menu-hidden');
-mobileMenuOverlay.classList.add('opacity-0');
-document.body.style.overflow = 'auto';
-setTimeout(() => {
-mobileMenu.classList.add('hidden');
-mobileMenuOverlay.classList.add('hidden');
-}, 400);
-}
-
-mobileMenuButton.addEventListener('click', openMenu);
-mobileMenuClose.addEventListener('click', closeMenu);
-mobileMenuOverlay.addEventListener('click', closeMenu);
-
-// Close menu when clicking on nav links
-document.querySelectorAll('#mobile-menu a').forEach(link => {
-link.addEventListener('click', closeMenu);
-});
-
-// FAQ Toggle
-document.querySelectorAll('[data-faq-toggle]').forEach(button => {
-button.addEventListener('click', () => {
-const answer = button.nextElementSibling;
-const icon = button.querySelector('i');
-const isOpen = answer.classList.contains('show');
-
-document.querySelectorAll('.faq-answer.show').forEach(openAnswer => {
-openAnswer.classList.remove('show');
-const openIcon = openAnswer.previousElementSibling?.querySelector('i');
-if (openIcon) {
-openIcon.classList.remove('ri-subtract-line');
-openIcon.classList.add('ri-add-line');
-}
-});
-
-if (!isOpen) {
-answer.classList.add('show');
-if (icon) {
-icon.classList.remove('ri-add-line');
-icon.classList.add('ri-subtract-line');
-}
-}
-});
-});
-
-// Quick Order Modal
-const quickOrderModal = document.getElementById('quick-order-modal');
-const closeModalBtn = document.getElementById('close-modal');
-const quickOrderForm = document.getElementById('quick-order-form');
-const modalTitle = document.getElementById('modal-title');
-const quickSubjectInput = document.getElementById('quick-subject');
-const formMessage = document.getElementById('form-message');
-
-// Open modal when clicking on buttons with data-quick-order
-document.querySelectorAll('[data-quick-order]').forEach(button => {
-button.addEventListener('click', function() {
-const subject = this.getAttribute('data-subject') || 'Заявка с сайта';
-modalTitle.textContent = subject;
-quickSubjectInput.value = subject;
-quickOrderModal.classList.remove('hidden');
-document.body.style.overflow = 'hidden';
-});
-});
-
-// Close modal
-function closeQuickOrderModal() {
-quickOrderModal.classList.add('hidden');
-document.body.style.overflow = 'auto';
-quickOrderForm.reset();
-formMessage.classList.add('hidden');
-if (typeof grecaptcha !== 'undefined') {
-grecaptcha.reset();
-}
-}
-
-closeModalBtn.addEventListener('click', closeQuickOrderModal);
-quickOrderModal.addEventListener('click', function(e) {
-if (e.target === quickOrderModal) {
-closeQuickOrderModal();
-}
-});
-
-// Form submission
-quickOrderForm.addEventListener('submit', async function(e) {
-e.preventDefault();
-
-// Get reCAPTCHA token
-const recaptchaResponse = grecaptcha.getResponse();
-if (!recaptchaResponse) {
-showMessage('Пожалуйста, подтвердите, что вы не робот', 'error');
-return;
-}
-
-// Collect form data
-const formData = {
-form_type: 'quick',
-'quick-subject': document.getElementById('quick-subject').value,
-'quick-name': document.getElementById('quick-name').value,
-'quick-phone': document.getElementById('quick-phone').value,
-'quick-company': document.getElementById('quick-company').value,
-'quick-email': document.getElementById('quick-email').value,
-'quick-comment': document.getElementById('quick-comment').value,
-recaptcha_token: recaptchaResponse
-};
-
-try {
-const response = await fetch('send_email.php', {
-method: 'POST',
-headers: {
-'Content-Type': 'application/json',
-},
-body: JSON.stringify(formData)
-});
-
-const result = await response.json();
-
-if (result.success) {
-showMessage('Спасибо! Ваша заявка успешно отправлена. Мы свяжемся с вами в ближайшее время.', 'success');
-quickOrderForm.reset();
-setTimeout(closeQuickOrderModal, 3000);
-} else {
-showMessage(result.message || 'Ошибка при отправке заявки. Попробуйте позже.', 'error');
-}
-} catch (error) {
-console.error('Error:', error);
-showMessage('Ошибка при отправке заявки. Попробуйте позже.', 'error');
-}
-
-if (typeof grecaptcha !== 'undefined') {
-grecaptcha.reset();
-}
-});
-
-function showMessage(message, type) {
-formMessage.textContent = message;
-formMessage.classList.remove('hidden', 'bg-green-100', 'text-green-800', 'bg-red-100', 'text-red-800');
-if (type === 'success') {
-formMessage.classList.add('bg-green-100', 'text-green-800');
-} else {
-formMessage.classList.add('bg-red-100', 'text-red-800');
-}
-}
-</script>
-
-<!-- Фиксированная кнопка телефона -->
-<a href="tel:+74959027759" class="fixed bottom-8 right-8 bg-red-600 text-white w-16 h-16 rounded-full shadow-2xl hover:bg-red-700 transition-all duration-300 flex items-center justify-center z-50 hover:scale-110">
-<i class="ri-phone-fill text-3xl"></i>
-</a>
+  <header
+    class="fixed top-4 left-6 right-6 lg:left-8 lg:right-8 bg-white/80 backdrop-blur-md z-50 shadow-lg rounded-xl">
+    <div class="w-full px-6 lg:px-8">
+      <div class="flex items-center justify-between h-24 gap-8">
+        <div class="flex items-center">
+          <img src="images/logo/logo.webp" alt="LOCKOUT TAGOUT Логотип" class="h-20 w-auto py-2"
+            onerror="this.onerror=null; this.style.display='none'; console.warn('Ошибка загрузки логотипа');">
+        </div>
+        <nav class="hidden lg:flex items-center space-x-8">
+          <a href="#solutions"
+            class="font-mulish-regular text-x text-black hover:text-primary transition-colors duration-200">Решения</a>
+          <a href="#promo"
+            class="font-mulish-regular text-x text-black hover:text-primary transition-colors duration-200">Акция</a>
+          <a href="#projects"
+            class="font-mulish-regular text-x text-black hover:text-primary transition-colors duration-200">Проекты</a>
+          <a href="#calculator"
+            class="font-mulish-regular text-x text-black hover:text-primary transition-colors duration-200">Расчет
+            стоимости</a>
+          <a href="#how-it-works"
+            class="font-mulish-regular text-x text-black hover:text-primary transition-colors duration-200">Как
+            работает</a>
+          <a href="#faq"
+            class="font-mulish-regular text-x text-black hover:text-primary transition-colors duration-200">FAQ</a>
+        </nav>
+        <div class="hidden lg:flex items-center gap-6">
+          <div class="flex flex-col items-end">
+            <a href="tel:+74959027759"
+              class="font-mulish-extrabold text-lg text-black hover:text-primary transition-colors duration-200">+7
+              (495) 902-77-59</a>
+            <div class="flex items-center gap-2 text-xs text-gray-700 mt-1">
+              <i class="ri-time-line text-primary"></i>
+              <span>24/7 поддержка</span>
+            </div>
+          </div>
+          <button data-quick-order data-subject="Заказать консультацию"
+            class="bg-secondary text-white font-mulish-semibold text-sm px-6 py-3 !rounded-button hover:bg-red-700 transition-colors duration-200 button-hover">
+            Заказать консультацию
+          </button>
+        </div>
+        <div class="lg:hidden">
+          <button id="mobile-menu-button" class="w-6 h-6 flex items-center justify-center">
+            <i class="ri-menu-line text-xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div id="mobile-menu-overlay"
+    class="fixed inset-0 bg-black/50 backdrop-blur-sm z-[60] hidden opacity-0 transition-opacity duration-300"></div>
+  <div id="mobile-menu"
+    class="fixed top-0 right-0 min-h-screen w-80 bg-white shadow-2xl z-[70] mobile-menu-transition mobile-menu-hidden overflow-y-auto hidden lg:hidden">
+    <div class="p-6">
+      <div class="flex items-center justify-between mb-8">
+        <img src="images/logo/logo.webp" alt="LOCKOUT TAGOUT Логотип" class="h-16 w-auto">
+        <button id="mobile-menu-close"
+          class="w-8 h-8 flex items-center justify-center hover:bg-gray-100 rounded-button transition-colors">
+          <i class="ri-close-line text-2xl"></i>
+        </button>
+      </div>
+      <button data-quick-order data-subject="Заказать консультацию"
+        class="w-full bg-secondary text-white font-mulish-semibold text-sm px-6 py-4 !rounded-button hover:bg-red-700 transition-colors duration-200 mb-8 button-hover">
+        Заказать консультацию
+      </button>
+      <nav class="space-y-4">
+        <a href="#solutions"
+          class="block font-mulish-semibold text-lg text-black hover:text-primary transition-colors duration-200 py-2">Решения</a>
+        <a href="#promo"
+          class="block font-mulish-semibold text-lg text-black hover:text-primary transition-colors duration-200 py-2">Акция</a>
+        <a href="#projects"
+          class="block font-mulish-semibold text-lg text-black hover:text-primary transition-colors duration-200 py-2">Проекты</a>
+        <a href="#calculator"
+          class="block font-mulish-semibold text-lg text-black hover:text-primary transition-colors duration-200 py-2">Расчет
+          стоимости</a>
+        <a href="#how-it-works"
+          class="block font-mulish-semibold text-lg text-black hover:text-primary transition-colors duration-200 py-2">Как
+          работает</a>
+        <a href="#faq"
+          class="block font-mulish-semibold text-lg text-black hover:text-primary transition-colors duration-200 py-2">FAQ</a>
+      </nav>
+    </div>
+  </div>
+
+  <div id="main-content">
+    <!-- Hero Section -->
+    <section class="hero-bg-lockout min-h-screen flex items-center relative pt-32 lg:pt-24">
+      <div class="overlay absolute inset-0"></div>
+      <div class="relative z-10 w-full px-6 lg:px-8">
+        <div class="w-full max-w-4xl">
+          <div class="mb-2 fade-in">
+            <span
+              class="inline-block bg-white/20 text-white font-mulish-semibold text-lg px-4 py-2 rounded-full backdrop-blur-sm">
+              <i class="ri-shield-check-line text-xl mr-2"></i>Индивидуальные решения по внедрению <img
+                src="images/logo/logo1White.PNG" alt="LOCKOUT TAGOUT" class="inline h-8 w-auto ml-2">
+            </span>
+          </div>
+
+          <h1
+            class="font-mulish-extrabold text-4x text-white mb-9 leading-tight fade-in fade-in-delay-1 text-center lg:text-left uppercase">
+            <span class="text-red-600">Нулевой травматизм</span>
+            <br>
+            при обслуживании оборудования — ваша новая <span class="text-red-600">норма</span>
+          </h1>
+
+          <p class="font-mulish-semibold text-2x text-white mb-12 fade-in fade-in-delay-2 text-center lg:text-left">
+            Внедряем систему промышленной безопасности, которая работает. Безопасность — это инвестиция, а не затраты!
+          </p>
+
+          <div class="flex fade-in fade-in-delay-3 justify-center lg:justify-start">
+            <a href="#calculator"
+              class="bg-red-600 text-white font-mulish-extrabold text-lg px-8 py-4 !rounded-button hover:bg-red-700 transition-colors duration-200 button-hover flex items-center justify-center whitespace-nowrap">
+              Рассчитать эффективность вложения
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section id="solutions" class="py-20 bg-white">
+      <div class="w-full px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-16 fade-in">
+            <h2 class="font-mulish-extrabold text-3xl lg:text-4xl text-black mb-4">
+              Что происходит на производстве без системы LOTO
+            </h2>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <!-- Block 1 -->
+            <div class="bg-gray-50 border-l-4 border-red-600 p-8 rounded-lg fade-in">
+              <div class="flex items-start gap-4">
+                <div class="flex-shrink-0">
+                  <div class="flex items-center justify-center h-12 w-12 rounded-lg bg-red-600">
+                    <span class="font-mulish-extrabold text-white text-lg">1</span>
+                  </div>
+                </div>
+                <div>
+                  <h3 class="font-mulish-extrabold text-xl text-black mb-2">70% тяжёлых инцидентов</h3>
+                  <p class="font-mulish-regular text-gray-700">Происходят при ремонтах и наладке оборудования.
+                    Неконтролируемый пуск — главная причина.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Block 2 -->
+            <div class="bg-gray-50 border-l-4 border-red-600 p-8 rounded-lg fade-in">
+              <div class="flex items-start gap-4">
+                <div class="flex-shrink-0">
+                  <div class="flex items-center justify-center h-12 w-12 rounded-lg bg-red-600">
+                    <span class="font-mulish-extrabold text-white text-lg">2</span>
+                  </div>
+                </div>
+                <div>
+                  <h3 class="font-mulish-extrabold text-xl text-black mb-2">Человеческий фактор</h3>
+                  <p class="font-mulish-regular text-gray-700">Оборудование запускают «по ошибке» или «по привычке». Без
+                    системы контроля — это неизбежно.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Block 3 -->
+            <div class="bg-gray-50 border-l-4 border-red-600 p-8 rounded-lg fade-in">
+              <div class="flex items-start gap-4">
+                <div class="flex-shrink-0">
+                  <div class="flex items-center justify-center h-12 w-12 rounded-lg bg-red-600">
+                    <span class="font-mulish-extrabold text-white text-lg">3</span>
+                  </div>
+                </div>
+                <div>
+                  <h3 class="font-mulish-extrabold text-xl text-black mb-2">Ответственность ложится на людей</h3>
+                  <p class="font-mulish-regular text-gray-700">На ОТ, инженеров и руководство. Штрафы, судебные
+                    разбирательства, потеря репутации.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Block 4 -->
+            <div class="bg-gray-50 border-l-4 border-red-600 p-8 rounded-lg fade-in">
+              <div class="flex items-start gap-4">
+                <div class="flex-shrink-0">
+                  <div class="flex items-center justify-center h-12 w-12 rounded-lg bg-red-600">
+                    <span class="font-mulish-extrabold text-white text-lg">4</span>
+                  </div>
+                </div>
+                <div>
+                  <h3 class="font-mulish-extrabold text-xl text-black mb-2">Один инцидент дороже всей системы</h3>
+                  <p class="font-mulish-regular text-gray-700">Стоимость инцидента включает траты на жизнь, штрафы,
+                    простой и восстановление. Вложение в LOTO — инвестиция.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center mt-12 fade-in">
+            <div class="border-t-2 border-red-600 py-9 bg-transparent">
+              <p class="font-mulish-extrabold text-2xl lg:text-3xl text-black">
+                LOCKOUT TAGOUT — это не опция.<br>
+                <span class="text-red-600">Это защита персонала, оборудования, производства.</span>
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Promo Section -->
+    <section id="promo" class="py-20 bg-gray-50">
+      <div class="w-full px-6 lg:px-8">
+        <div class="max-w-[76rem] mx-auto">
+          <div class="text-left lg:text-left mb-12 fade-in">
+            <h2 class="font-mulish-extrabold text-3xl lg:text-4xl text-black">
+              Попробуйте LOCKOUT TAGOUT на практике — без лишних затрат
+            </h2>
+          </div>
+
+          <div class="bg-white rounded-2xl shadow-lg overflow-hidden fade-in">
+            <div class="grid grid-cols-1 lg:grid-cols-[1fr_2fr]">
+              <div>
+                <img src="images/backgrounds/inv1.jpg" alt="Акция LOCKOUT TAGOUT"
+                  class="w-full h-64 lg:h-full object-cover">
+              </div>
+
+              <div class="p-8 lg:p-10 flex flex-col justify-center text-left">
+                <p class="font-mulish-extrabold text-2xl md:text-3xl text-black mb-1">
+                  Купи 10 блокираторов — получи 1 замок <br>за 1 рубль
+                </p>
+                <p class="font-mulish-regular text-sm text-gray-500 mb-6">
+                  * акция ограничена по времени и по варианту блокираторов
+                </p>
+                <p class="font-mulish-regular text-gray-700 text-lg mb-6">
+                  Отличный вариант для пилотного участка или тестирования системы на объекте
+                </p>
+                <a href="#pilot-kit"
+                  class="bg-red-600 text-white font-mulish-extrabold text-lg px-8 py-4 !rounded-button hover:bg-red-700 transition-colors duration-200 button-hover inline-flex items-center justify-center">
+                  Получить комплект для пилота
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Cases Section -->
+    <section id="projects" class="py-20 bg-white">
+      <div class="w-full px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-16 fade-in">
+            <h2 class="font-mulish-extrabold text-3xl lg:text-4xl text-black mb-4">
+              Кейсы внедрения LOCKOUT TAGOUT
+            </h2>
+            <p class="font-mulish-regular text-gray-600 text-lg max-w-3xl mx-auto">
+              Коротко о том, что происходило на объектах и к чему привело внедрение системы.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 gap-8 mb-12">
+            <!-- Case 1 -->
+            <div class="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm fade-in">
+              <h3 class="font-mulish-extrabold text-2xl text-black mb-6">Кейс: внедрение LOTO на энергопредприятии</h3>
+              <ul class="space-y-4">
+                <li class="flex gap-3">
+                  <span class="font-mulish-extrabold text-red-600">Что случилось:</span>
+                  <span class="font-mulish-regular text-gray-700">нужна была быстрая и безопасная организация ремонтов
+                    при большом объёме устаревшего оборудования и дефиците времени у персонала.</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="font-mulish-extrabold text-red-600">Что сделали:</span>
+                  <span class="font-mulish-regular text-gray-700">провели аудит оборудования, пересобрали перечень
+                    блокираторов, разработали документацию и процедуры, обучили персонал, поставили и смонтировали
+                    оборудование, сформировали LOTO‑посты.</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="font-mulish-extrabold text-red-600">Чем закончилось:</span>
+                  <span class="font-mulish-regular text-gray-700">проекты завершены в срок, при минимальной
+                    вовлечённости оперативного и ремонтного персонала.</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="font-mulish-extrabold text-red-600">Какие риски сняли:</span>
+                  <span class="font-mulish-regular text-gray-700">исключили несанкционированные пуски, снизили риски при
+                    ремонтах и пуско‑наладке, стандартизировали процедуры и ответственность.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="text-center fade-in">
+            <a href="#case-fit"
+              class="bg-red-600 text-white font-mulish-extrabold text-lg px-8 py-4 !rounded-button hover:bg-red-700 transition-colors duration-200 button-hover inline-flex items-center justify-center">
+              Понять, подходит ли это для нашего предприятия
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Objection Handling Section -->
+    <section id="objections" class="py-20 bg-gray-50">
+      <div class="w-full px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div class="bg-gray-50 border border-gray-200 rounded-2xl p-8 fade-in">
+              <h3 class="font-mulish-extrabold text-2xl text-black mb-6">«Мы пока подождём…»</h3>
+              <ul class="space-y-4">
+                <li class="flex items-start gap-3">
+                  <i class="ri-close-circle-line text-red-600 text-xl"></i>
+                  <span class="font-mulish-regular text-gray-700">Сейчас не до этого — ремонты горят.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <i class="ri-close-circle-line text-red-600 text-xl"></i>
+                  <span class="font-mulish-regular text-gray-700">Мы и так всё контролируем вручную.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <i class="ri-close-circle-line text-red-600 text-xl"></i>
+                  <span class="font-mulish-regular text-gray-700">Сначала разберёмся, потом внедрим.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="fade-in">
+              <div class="border-l-4 border-red-600 pl-8 py-8">
+                <p class="font-mulish-extrabold text-2xl lg:text-3xl text-black">
+                  Пока «ждём», риск остаётся тем же.<br>
+                  <span class="text-red-600">LOTO убирает его уже сейчас.</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Calculator Section -->
+    <section id="calculator" class="py-28 lg:py-32 bg-white relative bg-cover bg-center"
+      style="background-image: url('images/backgrounds/factory1.png');">
+      <div class="absolute inset-0 bg-black/60"></div>
+      <div class="relative z-10 w-full px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            <div class="fade-in text-white h-full flex flex-col justify-center">
+              <h2 class="font-mulish-extrabold text-3xl lg:text-4xl mb-4">
+                Предварительный расчёт внедрения системы LOCKOUT TAGOUT под ваше предприятие
+              </h2>
+              <p class="font-mulish-regular text-white/80 text-sm lg:text-base">
+                Коротко соберём вводные и подготовим расчёт под ваш объект.
+              </p>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-lg p-8 lg:p-10 fade-in">
+              <form class="grid grid-cols-1 md:grid-cols-2 gap-6" action="send_email.php" method="POST">
+                <input type="hidden" name="form_type" value="main">
+
+                <div>
+                  <label for="calc-name" class="block text-sm font-mulish-semibold text-gray-700 mb-2">Имя</label>
+                  <input id="calc-name" name="name" type="text"
+                    class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-red-600 focus:border-red-600"
+                    placeholder="Введите имя">
+                </div>
+
+                <div>
+                  <label for="calc-phone" class="block text-sm font-mulish-semibold text-gray-700 mb-2">Телефон</label>
+                  <input id="calc-phone" name="phone" type="tel"
+                    class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-red-600 focus:border-red-600"
+                    placeholder="+7 (___) ___-__-__">
+                </div>
+
+                <div>
+                  <label for="calc-email" class="block text-sm font-mulish-semibold text-gray-700 mb-2">Email</label>
+                  <input id="calc-email" name="email" type="email"
+                    class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-red-600 focus:border-red-600"
+                    placeholder="email@company.ru">
+                </div>
+
+                <div>
+                  <label for="calc-company" class="block text-sm font-mulish-semibold text-gray-700 mb-2">Компания</label>
+                  <input id="calc-company" name="company" type="text"
+                    class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-red-600 focus:border-red-600"
+                    placeholder="Название компании">
+                </div>
+
+                <div>
+                  <label for="calc-position"
+                    class="block text-sm font-mulish-semibold text-gray-700 mb-2">Должность</label>
+                  <input id="calc-position" name="position" type="text"
+                    class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-red-600 focus:border-red-600"
+                    placeholder="Ваша должность">
+                </div>
+
+                <div class="md:col-span-2">
+                  <button type="submit"
+                    class="w-full bg-red-600 text-white font-mulish-extrabold text-lg px-8 py-4 !rounded-button hover:bg-red-700 transition-colors duration-200 button-hover">
+                    Получить расчёт и рекомендации
+                  </button>
+                  <p class="text-xs text-black mt-3 text-center">
+                    Никаких КП и продаж — сначала разбираемся, подойдёт ли решение
+                  </p>
+                </div>
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it Works Section -->
+    <section id="how-it-works" class="py-20 bg-gray-50">
+      <div class="w-full px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-16 fade-in">
+            <h2 class="font-mulish-extrabold text-3xl lg:text-4xl text-black mb-4">
+              Как работает система LOCKOUT TAGOUT
+            </h2>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div class="flex flex-col items-center text-center fade-in fade-in-delay-1">
+              <div
+                class="w-20 h-20 bg-red-600 text-white rounded-full flex items-center justify-center font-mulish-extrabold text-2xl mb-4">
+                1
+              </div>
+              <h3 class="font-mulish-extrabold text-lg text-black mb-2">Разблокировка</h3>
+              <p class="font-mulish-regular text-gray-600 text-sm">
+                Отключаем энергию и изолируем все источники питания оборудования
+              </p>
+            </div>
+
+            <div class="flex flex-col items-center text-center fade-in fade-in-delay-2">
+              <div
+                class="w-20 h-20 bg-red-600 text-white rounded-full flex items-center justify-center font-mulish-extrabold text-2xl mb-4">
+                2
+              </div>
+              <h3 class="font-mulish-extrabold text-lg text-black mb-2">Блокировка</h3>
+              <p class="font-mulish-regular text-gray-600 text-sm">
+                Навешиваем персональные замки каждого работника и теги с информацией
+              </p>
+            </div>
+
+            <div class="flex flex-col items-center text-center fade-in fade-in-delay-3">
+              <div
+                class="w-20 h-20 bg-red-600 text-white rounded-full flex items-center justify-center font-mulish-extrabold text-2xl mb-4">
+                3
+              </div>
+              <h3 class="font-mulish-extrabold text-lg text-black mb-2">Проверка</h3>
+              <p class="font-mulish-regular text-gray-600 text-sm">
+                Проверяем отсутствие остаточной энергии и готовность к работе
+              </p>
+            </div>
+
+            <div class="flex flex-col items-center text-center fade-in fade-in-delay-4">
+              <div
+                class="w-20 h-20 bg-red-600 text-white rounded-full flex items-center justify-center font-mulish-extrabold text-2xl mb-4">
+                4
+              </div>
+              <h3 class="font-mulish-extrabold text-lg text-black mb-2">Разблокировка</h3>
+              <p class="font-mulish-regular text-gray-600 text-sm">
+                После работы снимаем замки только авторизованными лицами в строгом порядке
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Application Section -->
+    <section id="application" class="py-20 bg-white">
+      <div class="w-full px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-16 fade-in">
+            <h2 class="font-mulish-extrabold text-3xl lg:text-4xl text-black mb-4">
+              Применение LOCKOUT TAGOUT
+            </h2>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <!-- Left Column - Text Content -->
+            <div class="fade-in">
+              <div class="mb-8">
+                <h3 class="font-mulish-extrabold text-2xl text-black mb-4">Система Lockout Tagout</h3>
+                <p class="font-mulish-regular text-gray-700 leading-relaxed mb-4">
+                  Система Lockout Tagout — критически важный элемент промышленных систем безопасности. Она предотвращает
+                  непреднамеренный запуск оборудования во время технического обслуживания или ремонта, защищая
+                  сотрудников от потенциальных травм и создавая более безопасную рабочую среду.
+                </p>
+                <p class="font-mulish-regular text-gray-700 leading-relaxed">
+                  Основная задача LOTO — предотвратить непреднамеренный доступ к электропитанию и снабжению оборудования
+                  опасными средами во время проведения технических работ, защита персонала от механических и
+                  электрических рисков. Внедрение эффективных процедур LOTO может снизить количество аварий на
+                  предприятиях до 25-50%. Это особенно актуально для производственных компаний, где эксплуатация сложных
+                  машин требует повышенного уровня безопасности.
+                </p>
+              </div>
+
+              <div class="mb-8">
+                <h3 class="font-mulish-extrabold text-xl text-black mb-4">Система LOCKOUT TAGOUT применяется на всех
+                  этапах жизненного цикла оборудования, включая:</h3>
+                <ul class="space-y-2">
+                  <li class="flex items-start gap-3">
+                    <i class="ri-checkbox-circle-fill text-red-600 text-xl flex-shrink-0 mt-1"></i>
+                    <span class="font-mulish-regular text-gray-700">техническое обслуживание и регламентные
+                      работы;</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <i class="ri-checkbox-circle-fill text-red-600 text-xl flex-shrink-0 mt-1"></i>
+                    <span class="font-mulish-regular text-gray-700">планово-предупредительный ремонт (ППР), замену
+                      узлов;</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <i class="ri-checkbox-circle-fill text-red-600 text-xl flex-shrink-0 mt-1"></i>
+                    <span class="font-mulish-regular text-gray-700">пуско-наладочные работы;</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <i class="ri-checkbox-circle-fill text-red-600 text-xl flex-shrink-0 mt-1"></i>
+                    <span class="font-mulish-regular text-gray-700">очистку и диагностику оборудования;</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <i class="ri-checkbox-circle-fill text-red-600 text-xl flex-shrink-0 mt-1"></i>
+                    <span class="font-mulish-regular text-gray-700">аварийные и внеплановые работы.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Right Column - Industries and Image -->
+            <div class="fade-in fade-in-delay-1">
+              <div class="mb-8">
+                <h3 class="font-mulish-extrabold text-xl text-black mb-4">LOCKOUT TAGOUT широко используется в следующих
+                  отраслях:</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                  <div class="flex items-start gap-2">
+                    <i class="ri-arrow-right-s-fill text-red-600 text-xl flex-shrink-0"></i>
+                    <span class="font-mulish-regular text-gray-700">промышленное производство;</span>
+                  </div>
+                  <div class="flex items-start gap-2">
+                    <i class="ri-arrow-right-s-fill text-red-600 text-xl flex-shrink-0"></i>
+                    <span class="font-mulish-regular text-gray-700">энергетика;</span>
+                  </div>
+                  <div class="flex items-start gap-2">
+                    <i class="ri-arrow-right-s-fill text-red-600 text-xl flex-shrink-0"></i>
+                    <span class="font-mulish-regular text-gray-700">нефтегазовая и химическая промышленность;</span>
+                  </div>
+                  <div class="flex items-start gap-2">
+                    <i class="ri-arrow-right-s-fill text-red-600 text-xl flex-shrink-0"></i>
+                    <span class="font-mulish-regular text-gray-700">горнодобывающая отрасль;</span>
+                  </div>
+                  <div class="flex items-start gap-2">
+                    <i class="ri-arrow-right-s-fill text-red-600 text-xl flex-shrink-0"></i>
+                    <span class="font-mulish-regular text-gray-700">металлургия;</span>
+                  </div>
+                  <div class="flex items-start gap-2">
+                    <i class="ri-arrow-right-s-fill text-red-600 text-xl flex-shrink-0"></i>
+                    <span class="font-mulish-regular text-gray-700">пищевая и фармацевтическая промышленность;</span>
+                  </div>
+                  <div class="flex items-start gap-2">
+                    <i class="ri-arrow-right-s-fill text-red-600 text-xl flex-shrink-0"></i>
+                    <span class="font-mulish-regular text-gray-700">складские и логистические комплексы.</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-custom-gray rounded-2xl p-6">
+                <p class="font-mulish-regular text-gray-700 leading-relaxed">
+                  Система LOCKOUT TAGOUT (ЛОТО) применяется как дополнительный инструмент управления рисками и <span
+                    class="font-mulish-semibold text-black">интегрируется в существующие системы организации ремонтных и
+                    эксплуатационных работ</span>, действующие на территории Российской Федерации. ЛОТО не заменяет
+                  регламентированные процедуры, а усиливает их, обеспечивая физическую изоляцию источников опасной
+                  энергии и предотвращая человеческий фактор.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gray-50">
+      <div class="w-full px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto bg-gradient-to-r from-red-600 to-red-700 rounded-2xl p-12 text-center fade-in">
+          <h2 class="font-mulish-extrabold text-3xl lg:text-4xl text-white mb-4">
+            Готовы внедрить безопасность?
+          </h2>
+          <p class="font-mulish-semibold text-xl text-white mb-8">
+            Консультация экспертов совершенно бесплатна
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <button data-quick-order data-subject="Записаться на консультацию"
+              class="bg-white text-red-600 font-mulish-extrabold text-lg px-8 py-4 !rounded-button hover:bg-gray-100 transition-colors duration-200 button-hover">
+              Записаться на консультацию
+            </button>
+            <button data-quick-order data-subject="Позвонить прямо сейчас"
+              class="bg-red-600 text-white font-mulish-extrabold text-lg px-8 py-4 !rounded-button hover:bg-red-700 transition-colors duration-200 button-hover">
+              Позвонить прямо сейчас
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 lg:py-32 bg-cover bg-center bg-no-repeat relative"
+      style="background-image: url('images/backgrounds/back2.webp');">
+      <div class="absolute inset-0 bg-black/60"></div>
+      <div class="w-full px-6 lg:px-8 relative z-10">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-16 fade-in">
+            <h2 class="font-mulish-extrabold text-3xl lg:text-4xl text-white mb-4">
+              <span class="text-white">О</span> <span class="text-red-600">нас</span>
+            </h2>
+            <p class="font-mulish-regular text-white text-lg">
+              Познакомьтесь с компанией, которая делает производство безопаснее
+            </p>
+          </div>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <!-- Left Side - Image -->
+            <div class="fade-in order-2 lg:order-1">
+              <div class="relative">
+                <img src="images/backgrounds/per.jpg" alt="О компании"
+                  class="rounded-2xl shadow-2xl w-full h-auto object-cover"
+                  onerror="this.onerror=null; this.style.display='none'; console.warn('Ошибка загрузки изображения О нас');">
+                <div class="absolute -bottom-6 -right-6 bg-red-600 text-white p-6 rounded-xl shadow-xl hidden lg:block">
+                  <div class="text-center">
+                    <div class="font-mulish-extrabold text-4xl mb-2">15+</div>
+                    <div class="font-mulish-semibold text-sm">Лет опыта</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Side - Content -->
+            <div class="fade-in fade-in-delay-1 order-1 lg:order-2">
+              <p class="font-mulish-regular text-white text-lg mb-6">
+                Мы создаём решения, которые помогают предприятиям работать безопасно: от систем промышленной блокировки
+                LOCKOUT TAGOUT, до профессиональных ЛАРН-комплектов, сорбентов и аварийных душей для защиты персонала.
+              </p>
+              <p class="font-mulish-regular text-white text-lg mb-6">
+                Наша продукция — это не просто оборудование, а комплексные инструменты снижения риска, позволяющие
+                предотвратить экологический ущерб, обеспечить безопасность людей и соответствовать отраслевым нормам.
+                Клиенты доверяют нам защиту своих объектов и репутации, и именно это определяет наш подход.
+              </p>
+              <p class="font-mulish-regular text-white text-lg mb-8">
+                Мы работаем не ради прибыли, а ради будущего, где промышленность становится чище, ответственнее и
+                безопаснее. Вместе мы делаем шаги к миру, в котором экологическая культура — не формальность, а основа
+                ответственного бизнеса.
+              </p>
+              <div class="flex flex-col sm:flex-row gap-4">
+                <button data-quick-order data-subject="Узнать больше"
+                  class="bg-red-600 text-white font-mulish-extrabold text-lg px-8 py-4 !rounded-button hover:bg-red-700 transition-colors duration-200 button-hover">
+                  Узнать больше
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-20 bg-custom-gray">
+      <div class="w-full px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="text-center fade-in">
+              <div class="font-mulish-extrabold text-4xl lg:text-5xl text-red-600 mb-2">500+</div>
+              <div class="font-mulish-semibold text-gray-700">Предприятий</div>
+            </div>
+            <div class="text-center fade-in fade-in-delay-1">
+              <div class="font-mulish-extrabold text-4xl lg:text-5xl text-red-600 mb-2">30К+</div>
+              <div class="font-mulish-semibold text-gray-700">Обученных сотрудников</div>
+            </div>
+            <div class="text-center fade-in fade-in-delay-2">
+              <div class="font-mulish-extrabold text-4xl lg:text-5xl text-red-600 mb-2">95%</div>
+              <div class="font-mulish-semibold text-gray-700">Снижение травматизма</div>
+            </div>
+            <div class="text-center fade-in fade-in-delay-3">
+              <div class="font-mulish-extrabold text-4xl lg:text-5xl text-red-600 mb-2">15+</div>
+              <div class="font-mulish-semibold text-gray-700">Лет опыта</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-white">
+      <div class="w-full px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto">
+          <div class="text-center mb-12 fade-in">
+            <h2 class="font-mulish-extrabold text-3xl lg:text-4xl text-black">
+              FAQ
+            </h2>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="border border-gray-200 rounded-xl p-6">
+              <button class="w-full flex items-center justify-between text-left" data-faq-toggle>
+                <span class="font-mulish-extrabold text-xl lg:text-2xl text-black">Сколько стоит внедрение?</span>
+                <i class="ri-add-line text-3xl text-red-600"></i>
+              </button>
+              <div class="faq-answer mt-4 text-lg text-gray-700 font-mulish-regular">
+                Точная цена определяется после анализа объекта.
+              </div>
+            </div>
+
+            <div class="border border-gray-200 rounded-xl p-6">
+              <button class="w-full flex items-center justify-between text-left" data-faq-toggle>
+                <span class="font-mulish-extrabold text-xl lg:text-2xl text-black">Можно ли внедрять поэтапно?</span>
+                <i class="ri-add-line text-3xl text-red-600"></i>
+              </button>
+              <div class="faq-answer mt-4 text-lg text-gray-700 font-mulish-regular">
+                Да. Можно начать с пилотного цеха, участка.
+              </div>
+            </div>
+
+            <div class="border border-gray-200 rounded-xl p-6">
+              <button class="w-full flex items-center justify-between text-left" data-faq-toggle>
+                <span class="font-mulish-extrabold text-xl lg:text-2xl text-black">Насколько быстро это делается?</span>
+                <i class="ri-add-line text-3xl text-red-600"></i>
+              </button>
+              <div class="faq-answer mt-4 text-lg text-gray-700 font-mulish-regular">
+                От 70 дней — срок варьируется в зависимости от масштаба и специфики предприятия.
+              </div>
+            </div>
+
+            <div class="border border-gray-200 rounded-xl p-6">
+              <button class="w-full flex items-center justify-between text-left" data-faq-toggle>
+                <span class="font-mulish-extrabold text-xl lg:text-2xl text-black">Сотрудники будут саботировать?</span>
+                <i class="ri-add-line text-3xl text-red-600"></i>
+              </button>
+              <div class="faq-answer mt-4 text-lg text-gray-700 font-mulish-regular">
+                Мы обеспечиваем грамотное внедрение: проводим обучение, помогаем его освоить, доводим до персонала как
+                работать с системой и зачем это нужно. Даем рекомендации руководству Заказчика для вовлечения персонала
+                в процесс.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section id="final-cta" class="py-20 bg-red-600">
+      <div class="w-full px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto">
+          <div class="bg-white rounded-2xl shadow-lg p-10 text-center fade-in">
+            <h2 class="font-mulish-extrabold text-3xl lg:text-4xl text-black mb-6">
+              Начнём с безопасного шага — без риска и лишних затрат.
+            </h2>
+            <form id="quick-order-form-inline" class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left"
+              action="send_email.php" method="POST">
+              <input type="hidden" name="form_type" value="quick">
+              <input type="hidden" name="quick-subject" value="Оставить заявку">
+
+              <div>
+                <label for="cta-phone" class="block font-mulish-semibold text-sm text-gray-700 mb-2">Телефон *</label>
+                <input type="tel" id="cta-phone" name="quick-phone" required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 font-mulish-regular">
+              </div>
+              <div>
+                <label for="cta-email" class="block font-mulish-semibold text-sm text-gray-700 mb-2">Email *</label>
+                <input type="email" id="cta-email" name="quick-email" required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 font-mulish-regular">
+              </div>
+              <div>
+                <label for="cta-name" class="block font-mulish-semibold text-sm text-gray-700 mb-2">Имя</label>
+                <input type="text" id="cta-name" name="quick-name"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 font-mulish-regular">
+              </div>
+              <div>
+                <label for="cta-company" class="block font-mulish-semibold text-sm text-gray-700 mb-2">Компания</label>
+                <input type="text" id="cta-company" name="quick-company"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 font-mulish-regular">
+              </div>
+              <div class="md:col-span-2">
+                <label for="cta-position"
+                  class="block font-mulish-semibold text-sm text-gray-700 mb-2">Должность</label>
+                <input type="text" id="cta-position" name="quick-position"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 font-mulish-regular">
+              </div>
+
+              <div class="md:col-span-2 flex items-start gap-3">
+                <input type="checkbox" id="cta-privacy-consent" name="privacy-consent" required
+                  class="mt-1 w-4 h-4 text-red-600 border-gray-300 rounded focus:ring-red-500">
+                <label for="cta-privacy-consent" class="text-sm text-gray-700 font-mulish-regular">
+                  Я согласен(а) на <a
+                    href="https://oilspill-solutions.ru/politika-v-otnoshenii-obrabotki-personalnykh-dannykh"
+                    target="_blank" class="text-red-600 hover:text-red-700 underline">обработку персональных данных</a>
+                  и принимаю условия <a href="https://oilspill-solutions.ru/polzovatelskoe-soglashenie" target="_blank"
+                    class="text-red-600 hover:text-red-700 underline">пользовательского соглашения</a>
+                </label>
+              </div>
+
+              <div class="md:col-span-2">
+                <div class="g-recaptcha" data-sitekey="6Lex5x4sAAAAAIokTjf9eT9E6AcO0lGhx_0nBrBR"></div>
+              </div>
+
+              <div class="md:col-span-2">
+                <button type="submit"
+                  class="w-full bg-red-600 text-white font-mulish-extrabold text-lg px-10 py-4 !rounded-button hover:bg-red-700 transition-colors duration-200 button-hover">
+                  Оставить заявку
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12">
+      <div class="w-full px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+            <div>
+              <img src="images/logo/logo.webp" alt="LOCKOUT TAGOUT" class="h-16 w-auto mb-4">
+              <p class="font-mulish-regular text-gray-400 text-sm">
+                Система предотвращения травматизма при обслуживании оборудования
+              </p>
+            </div>
+            <div>
+              <h4 class="font-mulish-extrabold text-lg mb-4">Решения</h4>
+              <ul class="space-y-2 font-mulish-regular text-sm text-gray-400">
+                <li><a href="#solutions" class="hover:text-white transition">Решения</a></li>
+                <li><a href="#promo" class="hover:text-white transition">Акция</a></li>
+                <li><a href="#projects" class="hover:text-white transition">Проекты</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-mulish-extrabold text-lg mb-4">Информация</h4>
+              <ul class="space-y-2 font-mulish-regular text-sm text-gray-400">
+                <li><a href="#calculator" class="hover:text-white transition">Расчет стоимости</a></li>
+                <li><a href="#how-it-works" class="hover:text-white transition">Как работает</a></li>
+                <li><a href="#faq" class="hover:text-white transition">FAQ</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-mulish-extrabold text-lg mb-4">Контакты</h4>
+              <p class="font-mulish-semibold text-white mb-2">+7 (495) 902-77-59</p>
+              <p class="font-mulish-regular text-gray-400 text-sm">info@lockout-tagout.ru</p>
+              <p class="font-mulish-regular text-gray-400 text-sm mt-4">Пн-Пт: 09:00-18:00</p>
+            </div>
+          </div>
+          <div class="border-t border-gray-800 pt-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+              <p class="font-mulish-regular text-gray-400 text-sm">
+                © 2024 LOCKOUT TAGOUT. Все права защищены.
+              </p>
+              <div class="flex gap-6 text-sm">
+                <a href="https://oilspill-solutions.ru/politika-v-otnoshenii-obrabotki-personalnykh-dannykh"
+                  target="_blank" class="font-mulish-regular text-gray-400 hover:text-white transition">
+                  Политика конфиденциальности
+                </a>
+                <a href="https://oilspill-solutions.ru/polzovatelskoe-soglashenie" target="_blank"
+                  class="font-mulish-regular text-gray-400 hover:text-white transition">
+                  Пользовательское соглашение
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Quick Order Modal -->
+  <div id="quick-order-modal"
+    class="fixed inset-0 bg-black/70 backdrop-blur-sm z-[100] hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-md w-full max-h-[90vh] overflow-y-auto shadow-2xl transform transition-all">
+      <div class="p-6 lg:p-8">
+        <div class="flex items-center justify-between mb-6">
+          <h3 class="font-mulish-extrabold text-2xl text-black" id="modal-title">Оставить заявку</h3>
+          <button id="close-modal"
+            class="w-10 h-10 flex items-center justify-center hover:bg-gray-100 rounded-full transition-colors">
+            <i class="ri-close-line text-2xl text-gray-600"></i>
+          </button>
+        </div>
+        <form id="quick-order-form" class="space-y-4">
+          <input type="hidden" id="quick-subject" name="quick-subject" value="">
+          <div>
+            <label for="quick-phone" class="block font-mulish-semibold text-sm text-gray-700 mb-2">Телефон *</label>
+            <input type="tel" id="quick-phone" name="quick-phone" required
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 font-mulish-regular">
+          </div>
+          <div>
+            <label for="quick-email" class="block font-mulish-semibold text-sm text-gray-700 mb-2">Email *</label>
+            <input type="email" id="quick-email" name="quick-email" required
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 font-mulish-regular">
+          </div>
+          <div>
+            <label for="quick-name" class="block font-mulish-semibold text-sm text-gray-700 mb-2">Имя</label>
+            <input type="text" id="quick-name" name="quick-name"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 font-mulish-regular">
+          </div>
+          <div>
+            <label for="quick-company" class="block font-mulish-semibold text-sm text-gray-700 mb-2">Компания</label>
+            <input type="text" id="quick-company" name="quick-company"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 font-mulish-regular">
+          </div>
+          <div>
+            <label for="quick-position" class="block font-mulish-semibold text-sm text-gray-700 mb-2">Должность</label>
+            <input type="text" id="quick-position" name="quick-position"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 font-mulish-regular">
+          </div>
+          <div class="flex items-start gap-3">
+            <input type="checkbox" id="privacy-consent" name="privacy-consent" required
+              class="mt-1 w-4 h-4 text-red-600 border-gray-300 rounded focus:ring-red-500">
+            <label for="privacy-consent" class="text-sm text-gray-700 font-mulish-regular">
+              Я согласен(а) на <a
+                href="https://oilspill-solutions.ru/politika-v-otnoshenii-obrabotki-personalnykh-dannykh"
+                target="_blank" class="text-red-600 hover:text-red-700 underline">обработку персональных данных</a> и
+              принимаю условия <a href="https://oilspill-solutions.ru/polzovatelskoe-soglashenie" target="_blank"
+                class="text-red-600 hover:text-red-700 underline">пользовательского соглашения</a>
+            </label>
+          </div>
+          <div class="g-recaptcha" data-sitekey="6Lex5x4sAAAAAIokTjf9eT9E6AcO0lGhx_0nBrBR"></div>
+          <button type="submit"
+            class="w-full bg-red-600 text-white font-mulish-extrabold text-lg px-8 py-4 rounded-lg hover:bg-red-700 transition-colors duration-200 button-hover">
+            Отправить заявку
+          </button>
+        </form>
+        <div id="form-message" class="hidden mt-4 p-4 rounded-lg"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu Toggle -->
+  <script>
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+    const mobileMenuClose = document.getElementById('mobile-menu-close');
+
+    function openMenu() {
+      mobileMenu.classList.remove('hidden');
+      mobileMenu.classList.remove('mobile-menu-hidden');
+      // ensure start position for transition
+      mobileMenu.classList.add('mobile-menu-hidden');
+      // force reflow before sliding in
+      void mobileMenu.offsetWidth;
+      requestAnimationFrame(() => {
+        mobileMenu.classList.add('mobile-menu-visible');
+      });
+      mobileMenuOverlay.classList.remove('hidden');
+      mobileMenuOverlay.classList.remove('opacity-0');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+      mobileMenu.classList.remove('mobile-menu-visible');
+      mobileMenu.classList.add('mobile-menu-hidden');
+      mobileMenuOverlay.classList.add('opacity-0');
+      document.body.style.overflow = 'auto';
+      setTimeout(() => {
+        mobileMenu.classList.add('hidden');
+        mobileMenuOverlay.classList.add('hidden');
+      }, 400);
+    }
+
+    mobileMenuButton.addEventListener('click', openMenu);
+    mobileMenuClose.addEventListener('click', closeMenu);
+    mobileMenuOverlay.addEventListener('click', closeMenu);
+
+    // Close menu when clicking on nav links
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+
+    // FAQ Toggle
+    document.querySelectorAll('[data-faq-toggle]').forEach(button => {
+      button.addEventListener('click', () => {
+        const answer = button.nextElementSibling;
+        const icon = button.querySelector('i');
+        const isOpen = answer.classList.contains('show');
+
+        document.querySelectorAll('.faq-answer.show').forEach(openAnswer => {
+          openAnswer.classList.remove('show');
+          const openIcon = openAnswer.previousElementSibling?.querySelector('i');
+          if (openIcon) {
+            openIcon.classList.remove('ri-subtract-line');
+            openIcon.classList.add('ri-add-line');
+          }
+        });
+
+        if (!isOpen) {
+          answer.classList.add('show');
+          if (icon) {
+            icon.classList.remove('ri-add-line');
+            icon.classList.add('ri-subtract-line');
+          }
+        }
+      });
+    });
+
+    // Quick Order Modal
+    const quickOrderModal = document.getElementById('quick-order-modal');
+    const closeModalBtn = document.getElementById('close-modal');
+    const quickOrderForm = document.getElementById('quick-order-form');
+    const modalTitle = document.getElementById('modal-title');
+    const quickSubjectInput = document.getElementById('quick-subject');
+    const formMessage = document.getElementById('form-message');
+
+    // Open modal when clicking on buttons with data-quick-order
+    document.querySelectorAll('[data-quick-order]').forEach(button => {
+      button.addEventListener('click', function () {
+        const subject = this.getAttribute('data-subject') || 'Заявка с сайта';
+        modalTitle.textContent = subject;
+        quickSubjectInput.value = subject;
+        quickOrderModal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    // Close modal
+    function closeQuickOrderModal() {
+      quickOrderModal.classList.add('hidden');
+      document.body.style.overflow = 'auto';
+      quickOrderForm.reset();
+      formMessage.classList.add('hidden');
+      if (typeof grecaptcha !== 'undefined') {
+        grecaptcha.reset();
+      }
+    }
+
+    closeModalBtn.addEventListener('click', closeQuickOrderModal);
+    quickOrderModal.addEventListener('click', function (e) {
+      if (e.target === quickOrderModal) {
+        closeQuickOrderModal();
+      }
+    });
+
+    // Form submission
+    quickOrderForm.addEventListener('submit', async function (e) {
+      e.preventDefault();
+
+      // Get reCAPTCHA token
+      const recaptchaResponse = grecaptcha.getResponse();
+      if (!recaptchaResponse) {
+        showMessage('Пожалуйста, подтвердите, что вы не робот', 'error');
+        return;
+      }
+
+      // Collect form data
+      const formData = {
+        form_type: 'quick',
+        'quick-subject': document.getElementById('quick-subject').value,
+        'quick-name': document.getElementById('quick-name').value,
+        'quick-phone': document.getElementById('quick-phone').value,
+        'quick-company': document.getElementById('quick-company').value,
+        'quick-email': document.getElementById('quick-email').value,
+        'quick-comment': document.getElementById('quick-comment').value,
+        recaptcha_token: recaptchaResponse
+      };
+
+      try {
+        const response = await fetch('send_email.php', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData)
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+          showMessage('Спасибо! Ваша заявка успешно отправлена. Мы свяжемся с вами в ближайшее время.', 'success');
+          quickOrderForm.reset();
+          setTimeout(closeQuickOrderModal, 3000);
+        } else {
+          showMessage(result.message || 'Ошибка при отправке заявки. Попробуйте позже.', 'error');
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        showMessage('Ошибка при отправке заявки. Попробуйте позже.', 'error');
+      }
+
+      if (typeof grecaptcha !== 'undefined') {
+        grecaptcha.reset();
+      }
+    });
+
+    function showMessage(message, type) {
+      formMessage.textContent = message;
+      formMessage.classList.remove('hidden', 'bg-green-100', 'text-green-800', 'bg-red-100', 'text-red-800');
+      if (type === 'success') {
+        formMessage.classList.add('bg-green-100', 'text-green-800');
+      } else {
+        formMessage.classList.add('bg-red-100', 'text-red-800');
+      }
+    }
+  </script>
+
+  <!-- Фиксированная кнопка телефона -->
+  <a href="tel:+74959027759"
+    class="fixed bottom-8 right-8 bg-red-600 text-white w-16 h-16 rounded-full shadow-2xl hover:bg-red-700 transition-all duration-300 flex items-center justify-center z-50 hover:scale-110">
+    <i class="ri-phone-fill text-3xl"></i>
+  </a>
 
 </body>
+
 </html>
