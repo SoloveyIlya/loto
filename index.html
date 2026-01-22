@@ -525,9 +525,11 @@ font-size: 1.25rem;
 </button>
 <nav class="space-y-4">
 <a href="#solutions" class="block font-mulish-semibold text-lg text-black hover:text-primary transition-colors duration-200 py-2">Решения</a>
-<a href="#how-it-works" class="block font-mulish-semibold text-lg text-black hover:text-primary transition-colors duration-200 py-2">Как это работает</a>
-<a href="#standards" class="block font-mulish-semibold text-lg text-black hover:text-primary transition-colors duration-200 py-2">Стандарты</a>
-<a href="#about" class="block font-mulish-semibold text-lg text-black hover:text-primary transition-colors duration-200 py-2">О нас</a>
+<a href="#promo" class="block font-mulish-semibold text-lg text-black hover:text-primary transition-colors duration-200 py-2">Акция</a>
+<a href="#projects" class="block font-mulish-semibold text-lg text-black hover:text-primary transition-colors duration-200 py-2">Проекты</a>
+<a href="#calculator" class="block font-mulish-semibold text-lg text-black hover:text-primary transition-colors duration-200 py-2">Расчет стоимости</a>
+<a href="#how-it-works" class="block font-mulish-semibold text-lg text-black hover:text-primary transition-colors duration-200 py-2">Как работает</a>
+<a href="#faq" class="block font-mulish-semibold text-lg text-black hover:text-primary transition-colors duration-200 py-2">FAQ</a>
 </nav>
 </div>
 </div>
@@ -791,6 +793,96 @@ LOCKOUT TAGOUT — это не опция.<br>
 </div>
 </section>
 
+<!-- Objection Handling Section -->
+<section id="objections" class="py-20 bg-white">
+<div class="w-full px-6 lg:px-8">
+<div class="max-w-6xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+<div class="bg-gray-50 border border-gray-200 rounded-2xl p-8 fade-in">
+<h3 class="font-mulish-extrabold text-2xl text-black mb-6">«Мы пока подождём…»</h3>
+<ul class="space-y-4">
+<li class="flex gap-3">
+<i class="ri-close-circle-line text-red-600 text-xl mt-1"></i>
+<span class="font-mulish-regular text-gray-700">Сейчас не до этого — ремонты горят.</span>
+</li>
+<li class="flex gap-3">
+<i class="ri-close-circle-line text-red-600 text-xl mt-1"></i>
+<span class="font-mulish-regular text-gray-700">Мы и так всё контролируем вручную.</span>
+</li>
+<li class="flex gap-3">
+<i class="ri-close-circle-line text-red-600 text-xl mt-1"></i>
+<span class="font-mulish-regular text-gray-700">Сначала разберёмся, потом внедрим.</span>
+</li>
+</ul>
+</div>
+
+<div class="fade-in">
+<div class="border-l-4 border-red-600 pl-8 py-8">
+<p class="font-mulish-extrabold text-2xl lg:text-3xl text-black">
+Пока «ждём», риск остаётся тем же.<br>
+<span class="text-red-600">LOTO убирает его уже сейчас.</span>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Calculator Section -->
+<section id="calculator" class="py-20 bg-gray-50">
+<div class="w-full px-6 lg:px-8">
+<div class="max-w-5xl mx-auto">
+<div class="text-center mb-12 fade-in">
+<h2 class="font-mulish-extrabold text-3xl lg:text-4xl text-black">
+Предварительный расчёт внедрения системы LOCKOUT TAGOUT под ваше предприятие
+</h2>
+</div>
+
+<div class="bg-white rounded-2xl shadow-lg p-8 lg:p-10 fade-in">
+<form class="grid grid-cols-1 md:grid-cols-2 gap-6" action="send_email.php" method="POST">
+<input type="hidden" name="form_type" value="main">
+
+<div>
+<label for="calc-name" class="block text-sm font-mulish-semibold text-gray-700 mb-2">Имя</label>
+<input id="calc-name" name="name" type="text" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-red-600 focus:border-red-600" placeholder="Введите имя">
+</div>
+
+<div>
+<label for="calc-phone" class="block text-sm font-mulish-semibold text-gray-700 mb-2">Телефон</label>
+<input id="calc-phone" name="phone" type="tel" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-red-600 focus:border-red-600" placeholder="+7 (___) ___-__-__">
+</div>
+
+<div>
+<label for="calc-email" class="block text-sm font-mulish-semibold text-gray-700 mb-2">Email</label>
+<input id="calc-email" name="email" type="email" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-red-600 focus:border-red-600" placeholder="email@company.ru">
+</div>
+
+<div>
+<label for="calc-company" class="block text-sm font-mulish-semibold text-gray-700 mb-2">Компания</label>
+<input id="calc-company" name="company" type="text" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-red-600 focus:border-red-600" placeholder="Название компании">
+</div>
+
+<div>
+<label for="calc-position" class="block text-sm font-mulish-semibold text-gray-700 mb-2">Должность</label>
+<input id="calc-position" name="position" type="text" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-red-600 focus:border-red-600" placeholder="Ваша должность">
+</div>
+
+<div class="md:col-span-2">
+<button type="submit" class="w-full bg-red-600 text-white font-mulish-extrabold text-lg px-8 py-4 !rounded-button hover:bg-red-700 transition-colors duration-200 button-hover">
+Получить расчёт и рекомендации
+</button>
+<p class="text-xs text-gray-500 mt-3 text-center">
+Никаких КП и продаж — сначала разбираемся, подойдёт ли решение
+</p>
+</div>
+</form>
+</div>
+
+</div>
+</div>
+</section>
+
 <!-- Application Section -->
 <section id="application" class="py-20 lg:py-32 bg-white">
 <div class="w-full px-6 lg:px-8">
@@ -1008,6 +1100,117 @@ LOCKOUT TAGOUT — это не опция.<br>
 </div>
 </section>
 
+<!-- FAQ Section -->
+<section id="faq" class="py-20 bg-white">
+<div class="w-full px-6 lg:px-8">
+<div class="max-w-5xl mx-auto">
+<div class="text-center mb-12 fade-in">
+<h2 class="font-mulish-extrabold text-3xl lg:text-4xl text-black">
+FAQ
+</h2>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="border border-gray-200 rounded-xl p-6">
+<button class="w-full flex items-center justify-between text-left" data-faq-toggle>
+<span class="font-mulish-extrabold text-xl lg:text-2xl text-black">Сколько стоит внедрение?</span>
+<i class="ri-add-line text-3xl text-red-600"></i>
+</button>
+<div class="faq-answer mt-4 text-lg text-gray-700 font-mulish-regular">
+Точная цена определяется после анализа объекта.
+</div>
+</div>
+
+<div class="border border-gray-200 rounded-xl p-6">
+<button class="w-full flex items-center justify-between text-left" data-faq-toggle>
+<span class="font-mulish-extrabold text-xl lg:text-2xl text-black">Можно ли внедрять поэтапно?</span>
+<i class="ri-add-line text-3xl text-red-600"></i>
+</button>
+<div class="faq-answer mt-4 text-lg text-gray-700 font-mulish-regular">
+Да. Можно начать с пилотного цеха, участка.
+</div>
+</div>
+
+<div class="border border-gray-200 rounded-xl p-6">
+<button class="w-full flex items-center justify-between text-left" data-faq-toggle>
+<span class="font-mulish-extrabold text-xl lg:text-2xl text-black">Насколько быстро это делается?</span>
+<i class="ri-add-line text-3xl text-red-600"></i>
+</button>
+<div class="faq-answer mt-4 text-lg text-gray-700 font-mulish-regular">
+От 70 дней — срок варьируется в зависимости от масштаба и специфики предприятия.
+</div>
+</div>
+
+<div class="border border-gray-200 rounded-xl p-6">
+<button class="w-full flex items-center justify-between text-left" data-faq-toggle>
+<span class="font-mulish-extrabold text-xl lg:text-2xl text-black">Сотрудники будут саботировать?</span>
+<i class="ri-add-line text-3xl text-red-600"></i>
+</button>
+<div class="faq-answer mt-4 text-lg text-gray-700 font-mulish-regular">
+Мы обеспечиваем грамотное внедрение: проводим обучение, помогаем его освоить, доводим до персонала как работать с системой и зачем это нужно. Даем рекомендации руководству Заказчика для вовлечения персонала в процесс.
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- Final CTA Section -->
+<section id="final-cta" class="py-20 bg-gray-50">
+<div class="w-full px-6 lg:px-8">
+<div class="max-w-5xl mx-auto">
+<div class="bg-white rounded-2xl shadow-lg p-10 text-center fade-in">
+<h2 class="font-mulish-extrabold text-3xl lg:text-4xl text-black mb-6">
+Начнём с безопасного шага — без риска и лишних затрат.
+</h2>
+<form id="quick-order-form-inline" class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left" action="send_email.php" method="POST">
+<input type="hidden" name="form_type" value="quick">
+<input type="hidden" name="quick-subject" value="Оставить заявку">
+
+<div>
+<label for="cta-phone" class="block font-mulish-semibold text-sm text-gray-700 mb-2">Телефон *</label>
+<input type="tel" id="cta-phone" name="quick-phone" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 font-mulish-regular">
+</div>
+<div>
+<label for="cta-email" class="block font-mulish-semibold text-sm text-gray-700 mb-2">Email *</label>
+<input type="email" id="cta-email" name="quick-email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 font-mulish-regular">
+</div>
+<div>
+<label for="cta-name" class="block font-mulish-semibold text-sm text-gray-700 mb-2">Имя</label>
+<input type="text" id="cta-name" name="quick-name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 font-mulish-regular">
+</div>
+<div>
+<label for="cta-company" class="block font-mulish-semibold text-sm text-gray-700 mb-2">Компания</label>
+<input type="text" id="cta-company" name="quick-company" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 font-mulish-regular">
+</div>
+<div class="md:col-span-2">
+<label for="cta-position" class="block font-mulish-semibold text-sm text-gray-700 mb-2">Должность</label>
+<input type="text" id="cta-position" name="quick-position" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 font-mulish-regular">
+</div>
+
+<div class="md:col-span-2 flex items-start gap-3">
+<input type="checkbox" id="cta-privacy-consent" name="privacy-consent" required class="mt-1 w-4 h-4 text-red-600 border-gray-300 rounded focus:ring-red-500">
+<label for="cta-privacy-consent" class="text-sm text-gray-700 font-mulish-regular">
+Я согласен(а) на <a href="https://oilspill-solutions.ru/politika-v-otnoshenii-obrabotki-personalnykh-dannykh" target="_blank" class="text-red-600 hover:text-red-700 underline">обработку персональных данных</a> и принимаю условия <a href="https://oilspill-solutions.ru/polzovatelskoe-soglashenie" target="_blank" class="text-red-600 hover:text-red-700 underline">пользовательского соглашения</a>
+</label>
+</div>
+
+<div class="md:col-span-2">
+<div class="g-recaptcha" data-sitekey="6Lex5x4sAAAAAIokTjf9eT9E6AcO0lGhx_0nBrBR"></div>
+</div>
+
+<div class="md:col-span-2">
+<button type="submit" class="w-full bg-red-600 text-white font-mulish-extrabold text-lg px-10 py-4 !rounded-button hover:bg-red-700 transition-colors duration-200 button-hover">
+Оставить заявку
+</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</section>
+
 <!-- Footer -->
 <footer class="bg-black text-white py-12">
 <div class="w-full px-6 lg:px-8">
@@ -1022,17 +1225,17 @@ LOCKOUT TAGOUT — это не опция.<br>
 <div>
 <h4 class="font-mulish-extrabold text-lg mb-4">Решения</h4>
 <ul class="space-y-2 font-mulish-regular text-sm text-gray-400">
-<li><a href="#" class="hover:text-white transition">Оборудование ЛОТО</a></li>
-<li><a href="#" class="hover:text-white transition">Обучение</a></li>
-<li><a href="#" class="hover:text-white transition">Аудит</a></li>
+<li><a href="#solutions" class="hover:text-white transition">Решения</a></li>
+<li><a href="#promo" class="hover:text-white transition">Акция</a></li>
+<li><a href="#projects" class="hover:text-white transition">Проекты</a></li>
 </ul>
 </div>
 <div>
 <h4 class="font-mulish-extrabold text-lg mb-4">Информация</h4>
 <ul class="space-y-2 font-mulish-regular text-sm text-gray-400">
-<li><a href="#" class="hover:text-white transition">О компании</a></li>
-<li><a href="#" class="hover:text-white transition">Стандарты</a></li>
-<li><a href="#" class="hover:text-white transition">Контакты</a></li>
+<li><a href="#calculator" class="hover:text-white transition">Расчет стоимости</a></li>
+<li><a href="#how-it-works" class="hover:text-white transition">Как работает</a></li>
+<li><a href="#faq" class="hover:text-white transition">FAQ</a></li>
 </ul>
 </div>
 <div>
@@ -1150,6 +1353,32 @@ mobileMenuOverlay.addEventListener('click', closeMenu);
 // Close menu when clicking on nav links
 document.querySelectorAll('#mobile-menu a').forEach(link => {
 link.addEventListener('click', closeMenu);
+});
+
+// FAQ Toggle
+document.querySelectorAll('[data-faq-toggle]').forEach(button => {
+button.addEventListener('click', () => {
+const answer = button.nextElementSibling;
+const icon = button.querySelector('i');
+const isOpen = answer.classList.contains('show');
+
+document.querySelectorAll('.faq-answer.show').forEach(openAnswer => {
+openAnswer.classList.remove('show');
+const openIcon = openAnswer.previousElementSibling?.querySelector('i');
+if (openIcon) {
+openIcon.classList.remove('ri-subtract-line');
+openIcon.classList.add('ri-add-line');
+}
+});
+
+if (!isOpen) {
+answer.classList.add('show');
+if (icon) {
+icon.classList.remove('ri-add-line');
+icon.classList.add('ri-subtract-line');
+}
+}
+});
 });
 
 // Quick Order Modal
