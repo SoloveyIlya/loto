@@ -227,10 +227,15 @@
       box-sizing: border-box;
     }
 
+    .max-w-8xl {
+      max-width: 100rem;
+    }
+
     /* Fix container widths on mobile */
     @media (max-width: 768px) {
 
       .container,
+      .max-w-8xl,
       .max-w-7xl,
       .max-w-6xl,
       .max-w-5xl,
@@ -241,6 +246,11 @@
         padding-right: 1.25rem !important;
       }
 
+      .case-modal-panel {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+
       /* Fix hero section on mobile */
       .hero-bg {
         min-height: 100vh;
@@ -248,15 +258,15 @@
       }
 
       /* Fix text sizes on mobile */
-      .text-4x {
-        font-size: 2.5rem !important;
-        line-height: 1.1 !important;
-      }
+        .text-4x {
+          font-size: 1.5rem !important;
+          line-height: 1.1 !important;
+        }
 
-      .text-2x {
-        font-size: 1.5rem !important;
-        line-height: 1.3 !important;
-      }
+        .text-2x {
+          font-size: 1.1rem !important;
+          line-height: 1.3 !important;
+        }
 
       .text-5xl {
         font-size: 2.25rem !important;
@@ -395,11 +405,11 @@
 
       /* Extra small screens */
       .text-4x {
-        font-size: 2rem !important;
+        font-size: 1.5rem !important;
       }
 
       .text-2x {
-        font-size: 1.25rem !important;
+        font-size: 1.1rem !important;
       }
 
       .text-4xl {
@@ -724,33 +734,33 @@
 
 <body class="bg-white text-black font-mulish-regular overflow-x-hidden">
   <header
-    class="fixed top-4 left-6 right-6 lg:left-8 lg:right-8 bg-white/80 backdrop-blur-md z-50 shadow-lg rounded-xl">
-    <div class="w-full px-6 lg:px-8">
-      <div class="flex items-center justify-between h-24 gap-8">
-        <div class="flex items-center">
-          <img src="images/logo/logo.webp" alt="LOCKOUT TAGOUT Логотип" class="h-20 w-auto py-2"
+    class="fixed top-4 left-4 right-4 sm:left-6 sm:right-6 lg:left-8 lg:right-8 bg-white/80 backdrop-blur-md z-50 shadow-lg rounded-xl">
+    <div class="w-full px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-24 gap-6 xl:gap-8">
+        <div class="flex items-center flex-shrink-0">
+          <img src="images/logo/logo.webp" alt="LOCKOUT TAGOUT Логотип" class="h-16 xl:h-20 w-auto py-2 flex-shrink-0"
             onerror="this.onerror=null; this.style.display='none'; console.warn('Ошибка загрузки логотипа');">
         </div>
-        <nav class="hidden lg:flex items-center space-x-8">
+        <nav class="hidden lg:flex items-center space-x-6 xl:space-x-8">
           <a href="#solutions"
-            class="font-mulish-regular text-x text-black hover:text-primary transition-colors duration-200">Решения</a>
+            class="font-mulish-regular text-sm xl:text-base text-black hover:text-primary transition-colors duration-200">Решения</a>
           <a href="#promo"
-            class="font-mulish-regular text-x text-black hover:text-primary transition-colors duration-200">Акция</a>
+            class="font-mulish-regular text-sm xl:text-base text-black hover:text-primary transition-colors duration-200">Акция</a>
           <a href="#projects"
-            class="font-mulish-regular text-x text-black hover:text-primary transition-colors duration-200">Проекты</a>
+            class="font-mulish-regular text-sm xl:text-base text-black hover:text-primary transition-colors duration-200">Проекты</a>
           <a href="#calculator"
-            class="font-mulish-regular text-x text-black hover:text-primary transition-colors duration-200">Расчет
+            class="font-mulish-regular text-sm xl:text-base text-black hover:text-primary transition-colors duration-200">Расчет
             стоимости</a>
           <a href="#how-it-works"
-            class="font-mulish-regular text-x text-black hover:text-primary transition-colors duration-200">Как
+            class="font-mulish-regular text-sm xl:text-base text-black hover:text-primary transition-colors duration-200">Как
             работает</a>
           <a href="#faq"
-            class="font-mulish-regular text-x text-black hover:text-primary transition-colors duration-200">FAQ</a>
+            class="font-mulish-regular text-sm xl:text-base text-black hover:text-primary transition-colors duration-200">FAQ</a>
         </nav>
-        <div class="hidden lg:flex items-center gap-6">
+        <div class="hidden lg:flex items-center gap-4">
           <div class="flex flex-col items-end">
             <a href="tel:+74959027759"
-              class="font-mulish-extrabold text-lg text-black hover:text-primary transition-colors duration-200">+7
+              class="font-mulish-extrabold text-sm xl:text-base text-black hover:text-primary transition-colors duration-200 whitespace-nowrap">+7
               (495) 902-77-59</a>
             <div class="flex items-center gap-2 text-xs text-gray-700 mt-1">
               <i class="ri-time-line text-primary"></i>
@@ -808,32 +818,32 @@
 
   <div id="main-content">
     <!-- Hero Section -->
-    <section class="hero-bg-lockout min-h-screen flex items-center relative pt-32 lg:pt-24">
+    <section class="hero-bg-lockout min-h-screen flex items-center relative pt-28 lg:pt-24">
       <div class="overlay absolute inset-0"></div>
       <div class="relative z-10 w-full px-6 lg:px-8">
         <div class="w-full max-w-4xl">
-          <div class="mb-2 fade-in">
+          <div class="mb-4 fade-in">
             <span
-              class="inline-block bg-white/20 text-white font-mulish-semibold text-lg px-4 py-2 rounded-full backdrop-blur-sm">
-              <i class="ri-shield-check-line text-xl mr-2"></i>Индивидуальные решения по внедрению <img
-                src="images/logo/logo1White.PNG" alt="LOCKOUT TAGOUT" class="inline h-8 w-auto ml-2">
+              class="inline-flex flex-col items-center md:flex-row md:items-center bg-white/20 text-white font-mulish-semibold text-sm md:text-base lg:text-lg px-4 md:px-6 py-3 rounded-full backdrop-blur-sm text-center">
+              <i class="ri-shield-check-line text-base md:text-lg lg:text-xl mr-0 md:mr-3 hidden md:inline-flex"></i>Индивидуальные решения по внедрению <img
+                src="images/logo/logo1White.PNG" alt="LOCKOUT TAGOUT" class="block md:inline h-10 md:h-8 lg:h-10 w-auto mt-3 md:mt-0 md:ml-3">
             </span>
           </div>
 
           <h1
-            class="font-mulish-extrabold text-4x text-white mb-9 leading-tight fade-in fade-in-delay-1 text-center lg:text-left uppercase">
+            class="font-mulish-extrabold text-4x text-white mb-6 md:mb-9 leading-tight fade-in fade-in-delay-1 text-center lg:text-left uppercase">
             <span class="text-red-600">Нулевой травматизм</span>
             <br>
             при обслуживании оборудования — ваша новая <span class="text-red-600">норма</span>
           </h1>
 
-          <p class="font-mulish-semibold text-2x text-white mb-12 fade-in fade-in-delay-2 text-center lg:text-left">
+          <p class="font-mulish-semibold text-2x text-white mb-6 md:mb-12 fade-in fade-in-delay-2 text-center lg:text-left">
             Внедряем систему промышленной безопасности, которая работает. Безопасность — это инвестиция, а не затраты!
           </p>
 
           <div class="flex fade-in fade-in-delay-3 justify-center lg:justify-start">
             <a href="#calculator"
-              class="bg-red-600 text-white font-mulish-extrabold text-lg px-8 py-4 !rounded-button hover:bg-red-700 transition-colors duration-200 button-hover flex items-center justify-center whitespace-nowrap">
+              class="bg-red-600 text-white font-mulish-extrabold text-base md:text-lg px-6 md:px-8 py-3 md:py-4 !rounded-button hover:bg-red-700 transition-colors duration-200 button-hover flex items-center justify-center whitespace-nowrap">
               Рассчитать эффективность вложения
             </a>
           </div>
@@ -1099,7 +1109,7 @@
     <!-- Cases Section -->
     <section id="projects" class="py-20 bg-gray-50">
       <div class="w-full px-6 lg:px-8">
-        <div class="max-w-6xl mx-auto">
+        <div class="max-w-8xl mx-auto">
           <div class="text-center mb-16 fade-in">
             <h2 class="font-mulish-extrabold text-3xl lg:text-4xl text-black mb-4">
               Кейсы внедрения <span class="text-red-600">LOCKOUT TAGOUT</span>
@@ -1109,53 +1119,181 @@
             </p>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             <!-- Case Card 1 -->
             <button type="button"
-              class="text-left bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-200 fade-in"
+              class="text-left bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200 fade-in flex flex-col h-full"
               data-case-card
-              data-case-title="Кейс: внедрение LOTO на энергопредприятии"
-              data-case-happened="Нужна была быстрая и безопасная организация ремонтов при большом объёме устаревшего оборудования и дефиците времени у персонала."
-              data-case-did="Провели аудит оборудования, пересобрали перечень блокираторов, разработали документацию и процедуры, обучили персонал, поставили и смонтировали оборудование, сформировали LOTO‑посты."
-              data-case-result="Проекты завершены в срок, при минимальной вовлечённости оперативного и ремонтного персонала."
-              data-case-risks="Исключили несанкционированные пуски, снизили риски при ремонтах и пуско‑наладке, стандартизировали процедуры и ответственность.">
-              <div class="flex items-start justify-between gap-4">
-                <h3 class="font-mulish-extrabold text-xl text-black">Энергопредприятие</h3>
-                <span class="text-red-600 text-xl"><i class="ri-arrow-right-up-line"></i></span>
+              data-case-image="images/content/project1.png"
+              data-case-title="СГК: 6 энергопредприятий"
+              data-case-happened="Холдинг СГК инициировал внедрение LOCKOUT TAGOUT на ряде ТЭЦ и ГРЭС для повышения безопасности. В ходе реализации выявили: • заявленные в тендерах перечни блокирующего оборудования не соответствовали фактическому состоянию в цехах; • значительная часть оборудования была морально и физически устаревшей (1940–1970 гг. выпуска) и не предусматривала стандартных решений для блокировки; • оперативный и ремонтный персонал был сильно загружен и скептически относился к LOTO, опасаясь увеличения времени ремонтов."
+              data-case-did="Реализовали проекты «под ключ» на шести предприятиях: Ново-Кемеровская ТЭЦ, Новосибирская ТЭЦ-5, Барнаульская ТЭЦ-2, Барнаульская ТЭЦ-3, Кемеровская ГРЭС, Канская ТЭЦ. В рамках работ: • провели аудит оборудования (включая пилотные электроцеха); • разработали пакет документации (Положение по LOTO и инструкции по выводу в ремонт); • пересобрали перечни блокирующих устройств; • подобрали решения для незапираемого и нестандартного оборудования; • выполнили поставку и монтаж, сформировали LOTO‑посты; • обучили персонал; • выстроили регулярное взаимодействие с руководителями цехов; • оптимизировали процедуры через типовые LOTO‑процедуры для идентичного оборудования."
+              data-case-result="Все проекты завершены в установленные сроки. Внедрена полноценная система LOCKOUT TAGOUT: регламентирующая документация, обученный персонал, физически реализованные точки блокировки, единый подход к безопасному выводу оборудования в ремонт. Внедрение стало шагом к формированию устойчивой культуры безопасной работы."
+              data-case-risks="Сняты риски: травматизм при ремонтных и пуско‑наладочных работах; неконтролируемый пуск оборудования; зависимость безопасности от человеческого фактора; сопротивление персонала за счёт оптимизации процедур; срыв сроков из‑за несоответствия оборудования требованиям LOTO; формальное внедрение системы без реального применения.">
+              <div class="aspect-[4/3] overflow-hidden bg-gray-100">
+                <img src="images/content/project1.png" alt="СГК: 6 энергопредприятий" class="w-full h-full object-cover">
               </div>
-              <p class="font-mulish-regular text-gray-600 text-sm mt-2">Сжатый кейс внедрения с быстрым стартом и минимальной вовлечённостью персонала.</p>
+              <div class="p-6">
+                <div class="flex items-start justify-between gap-4 mb-2">
+                  <h3 class="font-mulish-extrabold text-xl text-black">СГК: 6 энергопредприятий</h3>
+                  <span class="text-red-600 text-xl flex-shrink-0"><i class="ri-arrow-right-up-line"></i></span>
+                </div>
+                <p class="font-mulish-regular text-gray-600 text-sm">В 2023–2024 годах реализовали серию проектов LOTO на шести энергопредприятиях СГК, повысив безопасность ремонтных и пуско‑наладочных работ в условиях действующего производства.</p>
+              </div>
             </button>
 
             <!-- Case Card 2 -->
             <button type="button"
-              class="text-left bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-200 fade-in"
+              class="text-left bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200 fade-in flex flex-col h-full"
               data-case-card
-              data-case-title="Кейс: пилотный запуск LOTO на производственном участке"
-              data-case-happened="Нужно было протестировать систему на одном участке без остановки основного производства."
-              data-case-did="Собрали пилотный комплект, описали процедуры, провели обучение смены и внедрили LOTO‑пост в зоне обслуживания."
-              data-case-result="Сформирован внутренний стандарт, получены измеримые результаты по безопасности и дисциплине работ."
-              data-case-risks="Снизили риск внезапного пуска оборудования и ошибки при ремонтах в ограниченное время.">
-              <div class="flex items-start justify-between gap-4">
-                <h3 class="font-mulish-extrabold text-xl text-black">Пилотный участок</h3>
-                <span class="text-red-600 text-xl"><i class="ri-arrow-right-up-line"></i></span>
+              data-case-image="images/content/project2.png"
+              data-case-title="Газпром Бурение: Астрахань бурение"
+              data-case-happened="В рамках программы повышения промышленной безопасности Газпром Бурение инициировал внедрение LOCKOUT TAGOUT на буровой установке. Для нашей команды это был первый проект в сфере нефтегазового бурения — отрасли с повышенными требованиями к безопасности, высокой технологической сложностью и строгими временными ограничениями. Ключевой вызов: крайне сжатые сроки реализации при необходимости глубокого погружения в специфику буровых процессов и оборудования."
+              data-case-did="Команда ООО «Промышленная культура безопасности»: • провела комплексный анализ производственных и технологических процессов буровой установки; • разработала и внедрила систему блокировки и маркировки оборудования с учётом специфики нефтегазового бурения; • адаптировала решения LOCKOUT TAGOUT под условия действующего производства; • провела обучение персонала правильному применению и эксплуатации системы; • обеспечила реализацию проекта в строгих временных рамках без потери качества."
+              data-case-result="Проект успешно реализован в установленные сроки. На буровой установке филиала «Астрахань бурение» внедрена система LOCKOUT TAGOUT, соответствующая современным требованиям промышленной безопасности. Выполнение проекта стало важным этапом в развитии партнёрских отношений между ООО «ПКБ» и Газпром Бурение и открыло новые перспективы сотрудничества."
+              data-case-risks="Сняты риски: травматизм при проведении буровых и обслуживающих работ; неконтролируемый запуск оборудования; аварийные ситуации при обслуживании буровых установок; несоответствие требованиям современных стандартов промышленной безопасности; срыв проекта из‑за сжатых сроков и высокой технологической сложности.">
+              <div class="aspect-[4/3] overflow-hidden bg-gray-100">
+                <img src="images/content/project2.png" alt="Газпром Бурение: Астрахань бурение" class="w-full h-full object-cover">
               </div>
-              <p class="font-mulish-regular text-gray-600 text-sm mt-2">Пилот на одном участке с быстрым результатом.</p>
+              <div class="p-6">
+                <div class="flex items-start justify-between gap-4 mb-2">
+                  <h3 class="font-mulish-extrabold text-xl text-black">Газпром Бурение: Астрахань бурение</h3>
+                  <span class="text-red-600 text-xl flex-shrink-0"><i class="ri-arrow-right-up-line"></i></span>
+                </div>
+                <p class="font-mulish-regular text-gray-600 text-sm">В 2023 году внедрили LOTO на буровой установке «Астрахань бурение», повысив безопасность работ в условиях нефтегазового бурения и жёстких сроков.</p>
+              </div>
             </button>
 
             <!-- Case Card 3 -->
             <button type="button"
-              class="text-left bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-200 fade-in"
+              class="text-left bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200 fade-in flex flex-col h-full"
               data-case-card
-              data-case-title="Кейс: стандартизация LOTO на нескольких цехах"
-              data-case-happened="В разных цехах применялись разные подходы к блокировке, что приводило к рискам и несогласованности действий."
-              data-case-did="Унифицировали процедуры, распределили роли, внедрили единый перечень блокираторов и визуальную навигацию."
-              data-case-result="Сократили время подготовки к ремонтам и повысили управляемость процесса."
-              data-case-risks="Убрали риски человеческого фактора и несогласованного запуска оборудования.">
-              <div class="flex items-start justify-between gap-4">
-                <h3 class="font-mulish-extrabold text-xl text-black">Несколько цехов</h3>
-                <span class="text-red-600 text-xl"><i class="ri-arrow-right-up-line"></i></span>
+              data-case-image="images/content/project3.png"
+              data-case-title="Tikkivala (ex-Tikkurila), СПб"
+              data-case-happened="Руководство производителя ЛКМ приняло решение внедрить LOCKOUT TAGOUT на опасном объекте с множеством источников энергии: термической, химической, электрической, механической, пневматической, гидравлической и гравитационной. Требования проекта: • не увеличить время вывода и ввода оборудования в ремонт; • обеспечить обязательное применение LOTO за счёт нормативной документации и обучения; • использовать оборудование, устойчивое к агрессивным средам, высоким температурам и механическим нагрузкам."
+              data-case-did="Команда ООО «Промышленная культура безопасности»: • провела детальный аудит оборудования; • выявила ключевые зоны риска и оборудование для обязательной блокировки; • сформировала перечень блокировочных устройств с учётом максимума ППР и резерва на расширение мощностей; • разработала Положение по изоляции опасных источников энергии; • подготовила обучающие материалы (инструкции, методические пособия, презентации); • провела обучение сотрудников и руководства с практикой; • осуществила поставку и монтаж оборудования, устойчивого к агрессивным условиям; • организовала размещение LOTO‑устройств для минимизации времени доступа."
+              data-case-result="На площадке Tikkivala полностью внедрена система LOCKOUT TAGOUT, соответствующая современным требованиям. Система стала работающим инструментом: безопасное проведение ремонтов, персональная ответственность за соблюдение процедур, уверенность сотрудников в защите жизни и здоровья."
+              data-case-risks="Сняты риски: травматизм при работе с опасными источниками энергии; неконтролируемый запуск оборудования; отказ персонала от LOTO из‑за сложности процедур; увеличение времени ППР; использование неподходящего оборудования в агрессивных условиях; формальное внедрение системы без реального применения.">
+              <div class="aspect-[4/3] overflow-hidden bg-gray-100">
+                <img src="images/content/project3.png" alt="Tikkivala (ex-Tikkurila), СПб" class="w-full h-full object-cover">
               </div>
-              <p class="font-mulish-regular text-gray-600 text-sm mt-2">Единый стандарт для разных подразделений.</p>
+              <div class="p-6">
+                <div class="flex items-start justify-between gap-4 mb-2">
+                  <h3 class="font-mulish-extrabold text-xl text-black">Tikkivala (ex-Tikkurila), СПб</h3>
+                  <span class="text-red-600 text-xl flex-shrink-0"><i class="ri-arrow-right-up-line"></i></span>
+                </div>
+                <p class="font-mulish-regular text-gray-600 text-sm">В 2022 году внедрили LOTO на площадке Tikkivala в Санкт-Петербурге, обеспечив высокую защиту персонала без увеличения времени ремонтных работ.</p>
+              </div>
+            </button>
+
+            <!-- Case Card 4 -->
+            <button type="button"
+              class="text-left bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200 fade-in flex flex-col h-full"
+              data-case-card
+              data-case-image="images/content/project4.png"
+              data-case-title="Группа Черкизово, Пенза"
+              data-case-happened="Крупнейший производитель мясной продукции инициировал внедрение LOCKOUT TAGOUT на мясоперерабатывающем предприятии с непрерывным циклом. Ключевые условия: • сохранить бесперебойную работу производства; • минимально влиять на технологические процессы; • быстро и качественно обучить персонал."
+              data-case-did="Команда ООО «ПКБ»: • провела анализ производственных процессов и оборудования; • определила ключевые зоны риска при ремонтах и техработах; • разработала комплект нормативной и регламентирующей документации по LOTO; • провела комплексное обучение сотрудников; • выстроила взаимодействие с оперативным и ремонтным персоналом для минимизации влияния на производство; • организовала регулярные рабочие совещания с руководством и представителями цехов."
+              data-case-result="Проект завершён в срок и без остановки производственных процессов. Внедрена система LOCKOUT TAGOUT, обеспечившая повышение безопасности ремонтов, снижение рисков травматизма и формирование новой культуры безопасной работы."
+              data-case-risks="Сняты риски: травматизм при обслуживании оборудования; аварийные ситуации при ремонте в условиях непрерывного цикла; простои производства; формальное внедрение без практического применения; недостаточная вовлечённость персонала в безопасность.">
+              <div class="aspect-[4/3] overflow-hidden bg-gray-100">
+                <img src="images/content/project4.png" alt="Группа Черкизово, Пенза" class="w-full h-full object-cover">
+              </div>
+              <div class="p-6">
+                <div class="flex items-start justify-between gap-4 mb-2">
+                  <h3 class="font-mulish-extrabold text-xl text-black">Группа Черкизово, Пенза</h3>
+                  <span class="text-red-600 text-xl flex-shrink-0"><i class="ri-arrow-right-up-line"></i></span>
+                </div>
+                <p class="font-mulish-regular text-gray-600 text-sm">В 2022 году внедрили LOTO на пищевом предприятии в Пензе, повысив безопасность ремонтов без остановки производства.</p>
+              </div>
+            </button>
+
+            <!-- Case Card 5 -->
+            <button type="button"
+              class="text-left bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200 fade-in flex flex-col h-full"
+              data-case-card
+              data-case-image="images/content/project5.png"
+              data-case-title="KNAUF, Звениговский завод"
+              data-case-happened="ООО «Звениговский завод строительного гипса» (группа KNAUF) инициировало внедрение LOCKOUT TAGOUT во всех цехах. Задача — до конца 2021 года запустить полноценную систему изоляции опасных источников энергии на новом и модернизированном оборудовании в рамках корпоративных требований KNAUF к охране труда и безопасности."
+              data-case-did="Проект реализован «под ключ» в 4 этапа: • аудит промышленного оборудования во всех цехах и формирование базы для разработки системы; • разработка полного пакета документации (Положение по предприятию и LOTO‑инструкции на каждую единицу оборудования); • поставка блокировочного оборудования и шеф‑монтаж LOTO‑постов; • обучение персонала с практикой и тестированием, выдача сертификатов."
+              data-case-result="К концу 2021 года система LOCKOUT TAGOUT успешно внедрена и запущена, соответствует стандартам международной группы KNAUF. Система интегрирована в повседневные процессы и стала частью комплексного подхода к охране труда и промышленной безопасности."
+              data-case-risks="Сняты риски: травматизм при обслуживании нового и модернизированного оборудования; несоответствие международным стандартам промышленной безопасности; неконтролируемый запуск оборудования во время ремонта; формальное внедрение системы без обучения персонала; неготовность сотрудников к практическому применению LOTO.">
+              <div class="aspect-[4/3] overflow-hidden bg-gray-100">
+                <img src="images/content/project5.png" alt="KNAUF, Звениговский завод" class="w-full h-full object-cover">
+              </div>
+              <div class="p-6">
+                <div class="flex items-start justify-between gap-4 mb-2">
+                  <h3 class="font-mulish-extrabold text-xl text-black">KNAUF, Звениговский завод</h3>
+                  <span class="text-red-600 text-xl flex-shrink-0"><i class="ri-arrow-right-up-line"></i></span>
+                </div>
+                <p class="font-mulish-regular text-gray-600 text-sm">В 2021 году внедрили LOTO «под ключ» на производстве KNAUF, обеспечив соответствие международным стандартам безопасности.</p>
+              </div>
+            </button>
+
+            <!-- Case Card 6 -->
+            <button type="button"
+              class="text-left bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200 fade-in flex flex-col h-full"
+              data-case-card
+              data-case-image="images/content/project6.png"
+              data-case-title="Горнозаводскцемент"
+              data-case-happened="Ключевому предприятию цементной отрасли требовалось повысить уровень промышленной безопасности и внедрить LOCKOUT TAGOUT. Производство цемента связано с высокой концентрацией опасных энергий: вращающиеся механизмы, электроустановки, пневмосистемы, групповые ремонты. Для проекта привлекли ООО «Промышленная культура безопасности» как эксперта по LOTO."
+              data-case-did="Проект выполнен в сжатые сроки и включал полный цикл внедрения: • аудит оборудования и технологических линий; • карта опасных энергетических источников; • технические решения для вращающихся механизмов, электроустановок и пневматических систем; • подбор и интеграция блокировочного оборудования, включая многофункциональные блокираторы и групповые станции; • нормативная база (Положение по LOTO, регламенты групповой блокировки); • обучающие материалы (видеоинструкции, интерактивные чек‑листы, обучающий фильм с участием персонала); • поставка и монтаж оборудования, мобильные LOTO‑станции; • обучение операторов и ремонтного персонала."
+              data-case-result="Менее чем за 3 месяца внедрена полнофункциональная система LOCKOUT TAGOUT, интегрированная в ключевые процессы. Система стала частью корпоративной политики безопасности, а обучающие материалы используются для регулярной подготовки персонала. Проект заложил основу для дальнейшей модернизации на предприятиях группы «Аккерманн Цемент»."
+              data-case-risks="Сняты риски: травматизм при обслуживании и ремонте; неконтролируемый запуск линий; несоответствие требованиям Ростехнадзора по управлению опасными энергиями; разрозненные и неунифицированные процедуры; недостаточная подготовка персонала к групповым и сложным ремонтам.">
+              <div class="aspect-[4/3] overflow-hidden bg-gray-100">
+                <img src="images/content/project6.png" alt="Горнозаводскцемент" class="w-full h-full object-cover">
+              </div>
+              <div class="p-6">
+                <div class="flex items-start justify-between gap-4 mb-2">
+                  <h3 class="font-mulish-extrabold text-xl text-black">Горнозаводскцемент</h3>
+                  <span class="text-red-600 text-xl flex-shrink-0"><i class="ri-arrow-right-up-line"></i></span>
+                </div>
+                <p class="font-mulish-regular text-gray-600 text-sm">В 2023 году внедрили LOTO на цементном производстве за менее чем 3 месяца, обеспечив соответствие отраслевым стандартам и Ростехнадзору.</p>
+              </div>
+            </button>
+
+            <!-- Case Card 7 -->
+            <button type="button"
+              class="text-left bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200 fade-in flex flex-col h-full"
+              data-case-card
+              data-case-image="images/content/project7.png"
+              data-case-title="Осколцемент, Белгородская область"
+              data-case-happened="Служба охраны труда и промышленной безопасности ЗАО «Осколцемент» инициировала внедрение LOCKOUT TAGOUT. Проект был сложным: • масштабное производство (3,7 млн тонн цемента в год); • сочетание современного оборудования и машин 1970‑х годов; • тяжёлые условия эксплуатации (запылённость, высокая загрузка персонала); • скепсис персонала из‑за опасений увеличения времени ремонтов."
+              data-case-did="Команда ООО «Промышленная культура безопасности»: • провела детальный анализ процессов и оборудования; • разработала комплект документации по LOTO; • подобрала блокировочные решения, включая незапираемое и устаревшее оборудование; • обеспечила поставку оборудования с учётом условий цементного производства; • провела обучение оперативного и ремонтного персонала; • выстроила диалог и проработала возражения по LOTO в условиях ППР, аварийных и регламентных работ."
+              data-case-result="Проект завершён в срок. На «Осколцементе» внедрена система LOCKOUT TAGOUT, применяется на постоянной основе и интегрирована в охрану труда и промышленную безопасность. Проект стал отправной точкой для серии последующих внедрений в цементной отрасли."
+              data-case-risks="Сняты риски: травматизм при обслуживании и ремонте; неконтролируемый запуск оборудования; отказ персонала от применения LOTO; несоответствие системы безопасности реальным условиям производства; срыв сроков ППР и аварийных работ; формальное внедрение без фактического использования.">
+              <div class="aspect-[4/3] overflow-hidden bg-gray-100">
+                <img src="images/content/project7.png" alt="Осколцемент, Белгородская область" class="w-full h-full object-cover">
+              </div>
+              <div class="p-6">
+                <div class="flex items-start justify-between gap-4 mb-2">
+                  <h3 class="font-mulish-extrabold text-xl text-black">Осколцемент, Белгородская область</h3>
+                  <span class="text-red-600 text-xl flex-shrink-0"><i class="ri-arrow-right-up-line"></i></span>
+                </div>
+                <p class="font-mulish-regular text-gray-600 text-sm">В 2023 году внедрили LOTO на цементном производстве Осколцемент, повысив безопасность работ на фоне большого парка оборудования.</p>
+              </div>
+            </button>
+
+            <!-- Case Card 8 -->
+            <button type="button"
+              class="text-left bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200 fade-in flex flex-col h-full"
+              data-case-card
+              data-case-image="images/content/project8.jpg"
+              data-case-title="Аскона-Век (Ковров и Владимир)"
+              data-case-happened="Руководство ООО «Аскона‑Век» приняло стратегическое решение внедрить LOTO. Производственные площадки отличались: • большим количеством оборудования с разными источниками энергии; • численностью персонала более 2000 человек; • необходимостью сохранять высокую производительность при ремонтах и обслуживании."
+              data-case-did="Команда ООО «Промышленная культура безопасности» реализовала проект поэтапно: • аудит оборудования и процессов; • выявление зон риска и оценка действующих процедур; • подбор и адаптация блокирующих устройств; • внедрение LOTO‑устройств и мобильных станций для групповых работ; • нормативная база (Положение о LOTO, техрегламенты, методические пособия и инструкции); • обучение с практикой; • система контроля (аудит эффективности, учет и хранение оборудования, регулярная проверка знаний). Дополнительно разработали карты минимального вмешательства для безопасных краткосрочных работ без остановки линий."
+              data-case-result="На площадках Аскона‑Век создана устойчивaя система LOCKOUT TAGOUT, интегрированная в ключевые процессы. Система включает: блокировочные устройства для всех типов энергий, маркировку с бирками и замками, LOTO‑карты на каждую единицу оборудования, стандарты хранения и учета, процедуры контроля и регулярного обучения."
+              data-case-risks="Сняты риски: производственный травматизм при обслуживании оборудования; неконтролируемый запуск машин и механизмов; снижение производительности из‑за полной остановки линий при мелких работах; формальное внедрение без реального контроля; недостаточная вовлеченность и подготовка персонала.">
+              <div class="aspect-[4/3] overflow-hidden bg-gray-100">
+                <img src="images/content/project8.jpg" alt="Аскона-Век (Ковров и Владимир)" class="w-full h-full object-cover">
+              </div>
+              <div class="p-6">
+                <div class="flex items-start justify-between gap-4 mb-2">
+                  <h3 class="font-mulish-extrabold text-xl text-black">Аскона-Век (Ковров и Владимир)</h3>
+                  <span class="text-red-600 text-xl flex-shrink-0"><i class="ri-arrow-right-up-line"></i></span>
+                </div>
+                <p class="font-mulish-regular text-gray-600 text-sm">В 2022 году внедрили LOTO на площадках Аскона‑Век, обеспечив системный контроль опасных энергий без снижения эффективности процессов.</p>
+              </div>
             </button>
           </div>
 
@@ -1337,64 +1475,44 @@
             </h2>
           </div>
 
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+          <div class="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-8 items-start">
+            <div class="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm fade-in">
+              <div class="aspect-[16/10] bg-gray-100">
+                <img src="images/content/lotoUse1.jpg" alt="LOTO на объекте — отключение энергии" class="w-full h-full object-contain">
+              </div>
+              <div class="p-6 lg:p-8">
+                <p class="font-mulish-extrabold text-lg text-black mb-3">Как это работает на объекте</p>
+                <p class="font-mulish-regular text-gray-700">
+                  На площадке мы фиксируем источник энергии, выводим оборудование в безопасное состояние и устанавливаем
+                  блокировку с персональным замком и биркой. Это исключает случайный запуск и делает процесс ремонта
+                  управляемым и прозрачным для всех участников.
+                </p>
+              </div>
+            </div>
+
             <div class="bg-gray-50 border border-gray-200 rounded-2xl p-6 lg:p-8 fade-in">
-              <h3 class="font-mulish-extrabold text-lg text-black mb-4">Видео / фото / схема:</h3>
+              <p class="font-mulish-extrabold text-lg text-black mb-4">Что происходит далее</p>
               <ul class="space-y-3 text-gray-700 font-mulish-regular text-sm lg:text-base">
                 <li class="flex items-start gap-3">
                   <i class="ri-checkbox-circle-line text-red-600 text-xl"></i>
-                  <span>Точка отключения</span>
+                  <span>Проверяем отсутствие энергии и подтверждаем безопасность работ.</span>
                 </li>
                 <li class="flex items-start gap-3">
                   <i class="ri-checkbox-circle-line text-red-600 text-xl"></i>
-                  <span>Установка блокиратора</span>
+                  <span>Фиксируем ответственных и порядок допуска к ремонту.</span>
                 </li>
                 <li class="flex items-start gap-3">
                   <i class="ri-checkbox-circle-line text-red-600 text-xl"></i>
-                  <span>Замок</span>
-                </li>
-                <li class="flex items-start gap-3">
-                  <i class="ri-checkbox-circle-line text-red-600 text-xl"></i>
-                  <span>Бирка</span>
-                </li>
-                <li class="flex items-start gap-3">
-                  <i class="ri-checkbox-circle-line text-red-600 text-xl"></i>
-                  <span>Снятие блокировки</span>
+                  <span>Снимаем блокировку только после завершения всех работ.</span>
                 </li>
               </ul>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 fade-in">
-              <div class="bg-gray-50 border border-gray-200 rounded-xl overflow-hidden">
-                <div class="aspect-video bg-gray-100 flex items-center justify-center text-gray-400 text-sm">
-                  Видео / фото
+              <div class="mt-6 rounded-xl overflow-hidden bg-white border border-gray-200">
+                <div class="aspect-[4/3] bg-gray-100">
+                  <img src="images/content/lotoUse2.jpg" alt="LOTO на объекте — установка блокиратора" class="w-full h-full object-cover">
                 </div>
                 <div class="p-4">
-                  <p class="font-mulish-semibold text-sm text-black">Точка отключения</p>
-                </div>
-              </div>
-              <div class="bg-gray-50 border border-gray-200 rounded-xl overflow-hidden">
-                <div class="aspect-video bg-gray-100 flex items-center justify-center text-gray-400 text-sm">
-                  Видео / фото
-                </div>
-                <div class="p-4">
-                  <p class="font-mulish-semibold text-sm text-black">Установка блокиратора</p>
-                </div>
-              </div>
-              <div class="bg-gray-50 border border-gray-200 rounded-xl overflow-hidden">
-                <div class="aspect-video bg-gray-100 flex items-center justify-center text-gray-400 text-sm">
-                  Видео / фото
-                </div>
-                <div class="p-4">
-                  <p class="font-mulish-semibold text-sm text-black">Замок и бирка</p>
-                </div>
-              </div>
-              <div class="bg-gray-50 border border-gray-200 rounded-xl overflow-hidden">
-                <div class="aspect-video bg-gray-100 flex items-center justify-center text-gray-400 text-sm">
-                  Видео / фото
-                </div>
-                <div class="p-4">
-                  <p class="font-mulish-semibold text-sm text-black">Снятие блокировки</p>
+                  <p class="font-mulish-extrabold text-sm text-black">Установка блокиратора, замка и бирки</p>
+                  <p class="font-mulish-regular text-sm text-gray-600 mt-1">Контроль доступа и визуальная маркировка.</p>
                 </div>
               </div>
             </div>
@@ -1742,8 +1860,8 @@
   <!-- Case Details Modal -->
   <div id="case-modal"
     class="fixed inset-0 bg-black/70 backdrop-blur-sm z-[100] hidden flex items-center justify-center p-4">
-    <div class="bg-white rounded-2xl max-w-4xl w-full max-h-[85vh] overflow-y-auto shadow-2xl transform transition-all modal-content modal-enter">
-      <div class="p-6 lg:p-8">
+    <div class="bg-white rounded-2xl max-w-6xl w-full max-h-[85vh] overflow-y-auto shadow-2xl transform transition-all modal-content modal-enter case-modal-panel">
+      <div class="p-4 md:p-6 lg:p-8">
         <div class="flex items-center justify-between mb-6">
           <h3 class="font-mulish-extrabold text-2xl text-black" id="case-modal-title">Кейс</h3>
           <button id="close-case-modal"
@@ -1751,22 +1869,25 @@
             <i class="ri-close-line text-2xl text-gray-600"></i>
           </button>
         </div>
-        <div class="space-y-4">
+        <div class="mb-6 rounded-xl overflow-hidden bg-gray-100" id="case-modal-image-container" style="display: none;">
+          <img id="case-modal-image" src="" alt="" class="w-full h-80 md:h-[22rem] object-cover">
+        </div>
+        <div class="space-y-6">
           <div class="grid grid-cols-1 md:grid-cols-[220px_1fr] gap-2 md:gap-6">
             <span class="font-mulish-extrabold text-red-600 md:whitespace-nowrap">Что случилось:</span>
-            <span class="font-mulish-regular text-gray-700" id="case-modal-happened"></span>
+            <div class="space-y-2" id="case-modal-happened"></div>
           </div>
           <div class="grid grid-cols-1 md:grid-cols-[220px_1fr] gap-2 md:gap-6">
             <span class="font-mulish-extrabold text-red-600 md:whitespace-nowrap">Что сделали:</span>
-            <span class="font-mulish-regular text-gray-700" id="case-modal-did"></span>
+            <div class="space-y-2" id="case-modal-did"></div>
           </div>
           <div class="grid grid-cols-1 md:grid-cols-[220px_1fr] gap-2 md:gap-6">
             <span class="font-mulish-extrabold text-red-600 md:whitespace-nowrap">Чем закончилось:</span>
-            <span class="font-mulish-regular text-gray-700" id="case-modal-result"></span>
+            <div class="space-y-2" id="case-modal-result"></div>
           </div>
           <div class="grid grid-cols-1 md:grid-cols-[220px_1fr] gap-2 md:gap-6">
             <span class="font-mulish-extrabold text-red-600 md:whitespace-nowrap">Какие риски сняли:</span>
-            <span class="font-mulish-regular text-gray-700" id="case-modal-risks"></span>
+            <div class="space-y-2" id="case-modal-risks"></div>
           </div>
         </div>
       </div>
@@ -1996,18 +2117,68 @@
     const caseModal = document.getElementById('case-modal');
     const closeCaseModalBtn = document.getElementById('close-case-modal');
     const caseModalTitle = document.getElementById('case-modal-title');
+    const caseModalImage = document.getElementById('case-modal-image');
+    const caseModalImageContainer = document.getElementById('case-modal-image-container');
     const caseModalHappened = document.getElementById('case-modal-happened');
     const caseModalDid = document.getElementById('case-modal-did');
     const caseModalResult = document.getElementById('case-modal-result');
     const caseModalRisks = document.getElementById('case-modal-risks');
 
+    const formatCaseContent = (text) => {
+      if (!text) {
+        return '';
+      }
+
+      const trimmed = text.trim();
+      const hasBullets = trimmed.includes('•');
+      const hasColon = trimmed.includes(':');
+      const hasSemicolons = trimmed.includes(';');
+
+      if (hasBullets) {
+        const [intro, ...items] = trimmed.split('•');
+        const introHtml = intro.trim() ? `<p class="font-mulish-regular text-gray-700">${intro.trim()}</p>` : '';
+        const listItems = items
+          .map(item => item.trim())
+          .filter(Boolean)
+          .map(item => `<li>${item}</li>`)
+          .join('');
+        return `${introHtml}<ul class="list-disc pl-5 space-y-2 font-mulish-regular text-gray-700">${listItems}</ul>`;
+      }
+
+      if (hasColon && hasSemicolons) {
+        const [intro, rest] = trimmed.split(':');
+        const introHtml = intro.trim() ? `<p class="font-mulish-regular text-gray-700">${intro.trim()}:</p>` : '';
+        const listItems = rest
+          .split(';')
+          .map(item => item.trim())
+          .filter(Boolean)
+          .map(item => `<li>${item}</li>`)
+          .join('');
+        return `${introHtml}<ul class="list-disc pl-5 space-y-2 font-mulish-regular text-gray-700">${listItems}</ul>`;
+      }
+
+      const withBreaks = trimmed.replace(/\n+/g, '<br>');
+      return `<p class="font-mulish-regular text-gray-700">${withBreaks}</p>`;
+    };
+
     document.querySelectorAll('[data-case-card]').forEach(card => {
       card.addEventListener('click', () => {
         caseModalTitle.textContent = card.dataset.caseTitle || 'Кейс';
-        caseModalHappened.textContent = card.dataset.caseHappened || '';
-        caseModalDid.textContent = card.dataset.caseDid || '';
-        caseModalResult.textContent = card.dataset.caseResult || '';
-        caseModalRisks.textContent = card.dataset.caseRisks || '';
+        
+        // Обработка изображения
+        const imageSrc = card.dataset.caseImage;
+        if (imageSrc && caseModalImage && caseModalImageContainer) {
+          caseModalImage.src = imageSrc;
+          caseModalImage.alt = card.dataset.caseTitle || '';
+          caseModalImageContainer.style.display = 'block';
+        } else if (caseModalImageContainer) {
+          caseModalImageContainer.style.display = 'none';
+        }
+        
+        caseModalHappened.innerHTML = formatCaseContent(card.dataset.caseHappened || '');
+        caseModalDid.innerHTML = formatCaseContent(card.dataset.caseDid || '');
+        caseModalResult.innerHTML = formatCaseContent(card.dataset.caseResult || '');
+        caseModalRisks.innerHTML = formatCaseContent(card.dataset.caseRisks || '');
         openModal(caseModal);
       });
     });
