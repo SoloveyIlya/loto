@@ -80,6 +80,11 @@
     }
   </script>
   <style>
+    /* Отступ при прокрутке к якорям — заголовок не перекрывается хедером (h-24 + небольшой запас) */
+    html {
+      scroll-padding-top: 7rem;
+    }
+
     .font-mulish-regular {
       font-family: 'Mulish', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       font-weight: 400;
@@ -741,19 +746,19 @@
           <img src="images/logo/logo.webp" alt="LOCKOUT TAGOUT Логотип" class="h-16 xl:h-20 w-auto py-2 flex-shrink-0"
             onerror="this.onerror=null; this.style.display='none'; console.warn('Ошибка загрузки логотипа');">
         </div>
-        <nav class="hidden lg:flex items-center space-x-6 xl:space-x-8">
+        <nav class="hidden lg:flex items-center flex-wrap gap-x-4 gap-y-2 xl:gap-x-6">
           <a href="#solutions"
-            class="font-mulish-regular text-sm xl:text-base text-black hover:text-primary transition-colors duration-200">Решения</a>
+            class="font-mulish-regular text-sm xl:text-base text-black hover:text-primary transition-colors duration-200 whitespace-nowrap">Решения</a>
+          <a href="#steps"
+            class="font-mulish-regular text-sm xl:text-base text-black hover:text-primary transition-colors duration-200 whitespace-nowrap">Этапы внедрения</a>
           <a href="#projects"
-            class="font-mulish-regular text-sm xl:text-base text-black hover:text-primary transition-colors duration-200">Проекты</a>
-          <a href="#calculator"
-            class="font-mulish-regular text-sm xl:text-base text-black hover:text-primary transition-colors duration-200">Расчет
-            стоимости</a>
+            class="font-mulish-regular text-sm xl:text-base text-black hover:text-primary transition-colors duration-200 whitespace-nowrap">Проекты</a>
           <a href="#how-it-works"
-            class="font-mulish-regular text-sm xl:text-base text-black hover:text-primary transition-colors duration-200">Как
-            работает</a>
+            class="font-mulish-regular text-sm xl:text-base text-black hover:text-primary transition-colors duration-200 whitespace-nowrap">Как работает</a>
+          <a href="#calculator"
+            class="font-mulish-regular text-sm xl:text-base text-black hover:text-primary transition-colors duration-200 whitespace-nowrap">Расчёт стоимости</a>
           <a href="#faq"
-            class="font-mulish-regular text-sm xl:text-base text-black hover:text-primary transition-colors duration-200">FAQ</a>
+            class="font-mulish-regular text-sm xl:text-base text-black hover:text-primary transition-colors duration-200 whitespace-nowrap">FAQ</a>
         </nav>
         <div class="hidden lg:flex items-center gap-4">
           <div class="flex flex-col items-end">
@@ -800,12 +805,12 @@
           class="block font-mulish-semibold text-lg text-black hover:text-primary transition-colors duration-200 py-2">Решения</a>
         <a href="#projects"
           class="block font-mulish-semibold text-lg text-black hover:text-primary transition-colors duration-200 py-2">Проекты</a>
-        <a href="#calculator"
-          class="block font-mulish-semibold text-lg text-black hover:text-primary transition-colors duration-200 py-2">Расчет
-          стоимости</a>
+        <a href="#steps"
+          class="block font-mulish-semibold text-lg text-black hover:text-primary transition-colors duration-200 py-2">Этапы внедрения</a>
         <a href="#how-it-works"
-          class="block font-mulish-semibold text-lg text-black hover:text-primary transition-colors duration-200 py-2">Как
-          работает</a>
+          class="block font-mulish-semibold text-lg text-black hover:text-primary transition-colors duration-200 py-2">Как на производстве</a>
+        <a href="#calculator"
+          class="block font-mulish-semibold text-lg text-black hover:text-primary transition-colors duration-200 py-2">Расчёт стоимости</a>
         <a href="#faq"
           class="block font-mulish-semibold text-lg text-black hover:text-primary transition-colors duration-200 py-2">FAQ</a>
       </nav>
@@ -1255,7 +1260,7 @@
     </section>
 
     <!-- Cases Section -->
-    <section id="projects" class="py-20 bg-gray-50">
+    <section id="projects" class="py-20 bg-white">
       <div class="w-full px-6 lg:px-8">
         <div class="max-w-8xl mx-auto">
           <div class="text-center mb-16 fade-in">
@@ -1528,7 +1533,7 @@
     </section>
 
     <!-- Objection Handling Section -->
-    <section id="objections" class="py-20 bg-white">
+    <section id="objections" class="py-20 bg-gray-50">
       <div class="w-full px-6 lg:px-8">
         <div class="max-w-7xl mx-auto">
           <div class="text-center mb-12 fade-in">
