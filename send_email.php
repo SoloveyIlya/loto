@@ -40,7 +40,7 @@ if (json_last_error() !== JSON_ERROR_NONE) {
 }
 
 // Проверка reCAPTCHA
-$recaptcha_secret = '6Lex5x4sAAAAAHNjkjgnekB4rdX-yt_LjvYPNWQ7'; // Секретный ключ reCAPTCHA
+$recaptcha_secret = '6LeqwWIsAAAAAE_PqliG-EKZykFMLC3s1wvivKnW'; // Секретный ключ reCAPTCHA
 $recaptcha_response = isset($data['recaptcha_token']) ? $data['recaptcha_token'] : '';
 
 if (empty($recaptcha_response)) {
