@@ -10,15 +10,47 @@ function formatNumber(num) {
   return new Intl.NumberFormat('ru-RU').format(Math.round(num));
 }
 
-function showFormMessage(messageEl, message, type) {
-  if (!messageEl) return;
-  messageEl.textContent = message;
-  messageEl.classList.remove('hidden', 'bg-green-100', 'text-green-800', 'bg-red-100', 'text-red-800');
+/* --- Всплывающее уведомление (тост) --- */
+
+function showToast(message, type) {
+  // Удаляем предыдущий тост, если есть
+  const existing = document.getElementById('toast-notification');
+  if (existing) existing.remove();
+
+  const toast = document.createElement('div');
+  toast.id = 'toast-notification';
+  toast.style.cssText = 'position:fixed;top:2rem;left:50%;transform:translateX(-50%) translateY(-20px);z-index:10000;'
+    + 'padding:1rem 1.5rem;border-radius:12px;font-family:var(--font-stack);font-weight:600;font-size:0.95rem;'
+    + 'max-width:90vw;text-align:center;box-shadow:0 8px 32px rgba(0,0,0,0.18);opacity:0;'
+    + 'transition:opacity 0.3s ease,transform 0.3s ease;display:flex;align-items:center;gap:0.6rem;';
+
   if (type === 'success') {
-    messageEl.classList.add('bg-green-100', 'text-green-800');
+    toast.style.background = '#fff';
+    toast.style.color = '#166534';
+    toast.style.border = '2px solid #22c55e';
+    toast.innerHTML = '<i class="ri-checkbox-circle-fill" style="font-size:1.4rem;color:#22c55e"></i>' + message;
   } else {
-    messageEl.classList.add('bg-red-100', 'text-red-800');
+    toast.style.background = '#fff';
+    toast.style.color = '#991b1b';
+    toast.style.border = '2px solid #ef4444';
+    toast.innerHTML = '<i class="ri-error-warning-fill" style="font-size:1.4rem;color:#ef4444"></i>' + message;
   }
+
+  document.body.appendChild(toast);
+
+  // Появление
+  requestAnimationFrame(() => {
+    toast.style.opacity = '1';
+    toast.style.transform = 'translateX(-50%) translateY(0)';
+  });
+
+  // Автоскрытие
+  const duration = type === 'success' ? 4000 : 5000;
+  setTimeout(() => {
+    toast.style.opacity = '0';
+    toast.style.transform = 'translateX(-50%) translateY(-20px)';
+    setTimeout(() => toast.remove(), 300);
+  }, duration);
 }
 
 function getRecaptchaToken(formEl) {
@@ -42,7 +74,7 @@ function resetRecaptcha(formEl) {
 /**
  * Отправка формы на сервер
  */
-async function submitForm(formData, messageEl, onSuccess) {
+async function submitForm(formData, onSuccess) {
   try {
     const response = await fetch('send_email.php', {
       method: 'POST',
@@ -52,14 +84,14 @@ async function submitForm(formData, messageEl, onSuccess) {
     const result = await response.json();
 
     if (result.success) {
-      showFormMessage(messageEl, 'Спасибо! Ваша заявка успешно отправлена. Мы свяжемся с вами в ближайшее время.', 'success');
+      showToast('Спасибо! Ваша заявка отправлена. Мы свяжемся с вами в ближайшее время.', 'success');
       if (onSuccess) onSuccess();
     } else {
-      showFormMessage(messageEl, result.message || 'Ошибка при отправке заявки. Попробуйте позже.', 'error');
+      showToast(result.message || 'Ошибка при отправке заявки. Попробуйте позже.', 'error');
     }
   } catch (error) {
     console.error('Form submit error:', error);
-    showFormMessage(messageEl, 'Ошибка при отправке заявки. Попробуйте позже.', 'error');
+    showToast('Ошибка при отправке заявки. Попробуйте позже.', 'error');
   }
 }
 
@@ -347,14 +379,12 @@ function initQuickOrderModal() {
   const form = document.getElementById('quick-order-form');
   const titleEl = document.getElementById('modal-title');
   const subjectInput = document.getElementById('quick-subject');
-  const messageEl = document.getElementById('form-message');
 
   if (!modal || !form) return;
 
   function closeQuickOrder() {
     closeModal(modal);
     form.reset();
-    messageEl.classList.add('hidden');
     resetRecaptcha(form);
   }
 
@@ -377,7 +407,7 @@ function initQuickOrderModal() {
     e.preventDefault();
     const token = getRecaptchaToken(form);
     if (!token) {
-      showFormMessage(messageEl, 'Пожалуйста, подтвердите, что вы не робот', 'error');
+      showToast('Пожалуйста, подтвердите, что вы не робот', 'error');
       return;
     }
 
@@ -392,9 +422,9 @@ function initQuickOrderModal() {
       recaptcha_token: token,
     };
 
-    await submitForm(formData, messageEl, () => {
+    await submitForm(formData, () => {
       form.reset();
-      setTimeout(closeQuickOrder, 3000);
+      closeQuickOrder();
     });
 
     resetRecaptcha(form);
@@ -406,14 +436,13 @@ function initQuickOrderModal() {
 
 function initCalculatorForm() {
   const form = document.getElementById('calculator-form');
-  const messageEl = document.getElementById('calculator-form-message');
   if (!form) return;
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const token = getRecaptchaToken(form);
     if (!token) {
-      showFormMessage(messageEl, 'Пожалуйста, подтвердите, что вы не робот', 'error');
+      showToast('Пожалуйста, подтвердите, что вы не робот', 'error');
       return;
     }
 
@@ -427,7 +456,7 @@ function initCalculatorForm() {
       recaptcha_token: token,
     };
 
-    await submitForm(formData, messageEl, () => form.reset());
+    await submitForm(formData, () => form.reset());
     resetRecaptcha(form);
   });
 }
@@ -437,14 +466,13 @@ function initCalculatorForm() {
 
 function initInlineForm() {
   const form = document.getElementById('quick-order-form-inline');
-  const messageEl = document.getElementById('inline-form-message');
   if (!form) return;
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const token = getRecaptchaToken(form);
     if (!token) {
-      showFormMessage(messageEl, 'Пожалуйста, подтвердите, что вы не робот', 'error');
+      showToast('Пожалуйста, подтвердите, что вы не робот', 'error');
       return;
     }
 
@@ -459,7 +487,7 @@ function initInlineForm() {
       recaptcha_token: token,
     };
 
-    await submitForm(formData, messageEl, () => form.reset());
+    await submitForm(formData, () => form.reset());
     resetRecaptcha(form);
   });
 }
