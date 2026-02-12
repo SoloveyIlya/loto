@@ -13,6 +13,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 
 header('Content-Type: application/json; charset=utf-8');
 
+/**
+ * Очистка строки для plain-text письма:
+ * убираем управляющие символы, но сохраняем переносы строк и спецсимволы как есть.
+ */
+function cleanForPlainText($value) {
+    if (!is_string($value)) return 'Не указано';
+    $value = trim($value);
+    if ($value === '') return 'Не указано';
+    // Удаляем управляющие символы кроме \n \r \t
+    return preg_replace('/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]/', '', $value);
+}
+
 // Проверка метода запроса
 $request_method = $_SERVER['REQUEST_METHOD'] ?? 'UNKNOWN';
 if ($request_method !== 'POST') {
@@ -101,38 +113,35 @@ $message_body = '';
 
 switch ($form_type) {
     case 'main':
-        $subject = 'Новая заявка с главной формы - Получить подбор ЛАРН-набора';
+        $subject = 'Новая заявка — Lockout Tagout';
         $message_body = "Новая заявка с главной формы\n\n";
-        $message_body .= "Название компании: " . (isset($data['company-name']) ? htmlspecialchars($data['company-name']) : 'Не указано') . "\n";
-        $message_body .= "Контактное лицо: " . (isset($data['contact-person']) ? htmlspecialchars($data['contact-person']) : 'Не указано') . "\n";
-        $message_body .= "Телефон: " . (isset($data['phone']) ? htmlspecialchars($data['phone']) : 'Не указано') . "\n";
-        $message_body .= "Email: " . (isset($data['email']) ? htmlspecialchars($data['email']) : 'Не указано') . "\n";
-        $message_body .= "Регион / город: " . (isset($data['region']) ? htmlspecialchars($data['region']) : 'Не указано') . "\n";
-        $message_body .= "Тип объекта: " . (isset($data['object-type']) ? htmlspecialchars($data['object-type']) : 'Не указано') . "\n";
-        $message_body .= "Комментарий: " . (isset($data['comment']) ? htmlspecialchars($data['comment']) : 'Не указано') . "\n";
+        $message_body .= "Название компании: " . cleanForPlainText($data['company-name'] ?? '') . "\n";
+        $message_body .= "Контактное лицо: " . cleanForPlainText($data['contact-person'] ?? '') . "\n";
+        $message_body .= "Телефон: " . cleanForPlainText($data['phone'] ?? '') . "\n";
+        $message_body .= "Email: " . cleanForPlainText($data['email'] ?? '') . "\n";
+        $message_body .= "Должность: " . cleanForPlainText($data['position'] ?? '') . "\n";
         break;
         
     case 'quick':
-        $quick_subject = isset($data['quick-subject']) ? trim($data['quick-subject']) : '';
-        // Тема письма теперь без префикса "Новая быстрая заявка"
-        $subject = $quick_subject !== '' ? htmlspecialchars($quick_subject) : 'Заявка с сайта';
+        $quick_subject = cleanForPlainText($data['quick-subject'] ?? '');
+        $subject = $quick_subject !== 'Не указано' ? $quick_subject : 'Заявка с сайта';
         $message_body = '';
-        $message_body .= "Тема заявки: " . ($quick_subject !== '' ? htmlspecialchars($quick_subject) : 'Не указано') . "\n";
-        $message_body .= "Телефон: " . (isset($data['quick-phone']) ? htmlspecialchars($data['quick-phone']) : 'Не указано') . "\n";
-        $message_body .= "Имя: " . (isset($data['quick-name']) ? htmlspecialchars($data['quick-name']) : 'Не указано') . "\n";
-        $message_body .= "Компания: " . (isset($data['quick-company']) ? htmlspecialchars($data['quick-company']) : 'Не указано') . "\n";
-        $message_body .= "Email: " . (isset($data['quick-email']) ? htmlspecialchars($data['quick-email']) : 'Не указано') . "\n";
-        $message_body .= "Комментарий: " . (isset($data['quick-comment']) ? htmlspecialchars($data['quick-comment']) : 'Не указано') . "\n";
+        $message_body .= "Тема заявки: " . $quick_subject . "\n";
+        $message_body .= "Телефон: " . cleanForPlainText($data['quick-phone'] ?? '') . "\n";
+        $message_body .= "Имя: " . cleanForPlainText($data['quick-name'] ?? '') . "\n";
+        $message_body .= "Компания: " . cleanForPlainText($data['quick-company'] ?? '') . "\n";
+        $message_body .= "Email: " . cleanForPlainText($data['quick-email'] ?? '') . "\n";
+        $message_body .= "Должность: " . cleanForPlainText($data['quick-position'] ?? '') . "\n";
         break;
         
     case 'docs':
         $subject = 'Запрос на скачивание документов';
         $message_body = "Запрос на скачивание документов\n\n";
-        $message_body .= "Телефон: " . (isset($data['docs-phone']) ? htmlspecialchars($data['docs-phone']) : 'Не указано') . "\n";
-        $message_body .= "Email: " . (isset($data['docs-email']) ? htmlspecialchars($data['docs-email']) : 'Не указано') . "\n";
-        $message_body .= "ФИО: " . (isset($data['docs-name']) ? htmlspecialchars($data['docs-name']) : 'Не указано') . "\n";
-        $message_body .= "Компания: " . (isset($data['docs-company']) ? htmlspecialchars($data['docs-company']) : 'Не указано') . "\n";
-        $message_body .= "Должность: " . (isset($data['docs-position']) ? htmlspecialchars($data['docs-position']) : 'Не указано') . "\n";
+        $message_body .= "Телефон: " . cleanForPlainText($data['docs-phone'] ?? '') . "\n";
+        $message_body .= "Email: " . cleanForPlainText($data['docs-email'] ?? '') . "\n";
+        $message_body .= "ФИО: " . cleanForPlainText($data['docs-name'] ?? '') . "\n";
+        $message_body .= "Компания: " . cleanForPlainText($data['docs-company'] ?? '') . "\n";
+        $message_body .= "Должность: " . cleanForPlainText($data['docs-position'] ?? '') . "\n";
         break;
         
     default:
@@ -147,7 +156,7 @@ $message_body .= "IP адрес: " . ($_SERVER['REMOTE_ADDR'] ?? 'Неизвес
 
 // Настройки для отправки письма
 $fromEmail = 'no-reply@oilspill-solutions.ru';
-$fromName  = 'ЛАРН Oilspill Solutions';
+$fromName  = 'Lockout Tagout';
 
 $headers  = "From: ".$fromName." <".$fromEmail.">\r\n";
 $headers .= "Reply-To: ".$fromEmail."\r\n";

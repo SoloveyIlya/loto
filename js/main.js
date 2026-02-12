@@ -26,10 +26,8 @@ function getRecaptchaToken(formEl) {
   const widget = formEl.querySelector('.g-recaptcha');
   if (!widget) return '';
   const widgetId = widget.getAttribute('data-widget-id');
-  if (widgetId !== null && widgetId !== '') {
-    return grecaptcha.getResponse(Number(widgetId));
-  }
-  return grecaptcha.getResponse();
+  if (widgetId === null || widgetId === '') return '';
+  return grecaptcha.getResponse(Number(widgetId));
 }
 
 function resetRecaptcha(formEl) {
@@ -37,11 +35,8 @@ function resetRecaptcha(formEl) {
   const widget = formEl.querySelector('.g-recaptcha');
   if (!widget) return;
   const widgetId = widget.getAttribute('data-widget-id');
-  if (widgetId !== null && widgetId !== '') {
-    grecaptcha.reset(Number(widgetId));
-  } else {
-    grecaptcha.reset();
-  }
+  if (widgetId === null || widgetId === '') return;
+  grecaptcha.reset(Number(widgetId));
 }
 
 /**
@@ -386,7 +381,6 @@ function initQuickOrderModal() {
       return;
     }
 
-    const quickCommentEl = document.getElementById('quick-comment');
     const formData = {
       form_type: 'quick',
       'quick-subject': document.getElementById('quick-subject').value,
@@ -394,7 +388,7 @@ function initQuickOrderModal() {
       'quick-phone': document.getElementById('quick-phone').value,
       'quick-company': document.getElementById('quick-company').value,
       'quick-email': document.getElementById('quick-email').value,
-      'quick-comment': quickCommentEl ? quickCommentEl.value : '',
+      'quick-position': document.getElementById('quick-position').value,
       recaptcha_token: token,
     };
 
@@ -429,7 +423,7 @@ function initCalculatorForm() {
       'contact-person': document.getElementById('calc-name').value,
       'phone': document.getElementById('calc-phone').value,
       'email': document.getElementById('calc-email').value,
-      'comment': document.getElementById('calc-position').value,
+      'position': document.getElementById('calc-position').value,
       recaptcha_token: token,
     };
 
@@ -505,6 +499,88 @@ function initDowntimeCalculator() {
 }
 
 
+/* --- Маска телефона +7 (___) ___-__-__ --- */
+
+function initPhoneMasks() {
+  document.querySelectorAll('input[type="tel"]').forEach(input => {
+    input.addEventListener('input', handlePhoneInput);
+    input.addEventListener('focus', handlePhoneFocus);
+    input.addEventListener('keydown', handlePhoneKeydown);
+  });
+}
+
+function formatPhone(digits) {
+  // digits — только цифры после 7 (максимум 10 штук)
+  let result = '+7';
+  if (digits.length === 0) return result;
+  result += ' (' + digits.substring(0, 3);
+  if (digits.length >= 3) result += ')';
+  if (digits.length > 3) result += ' ' + digits.substring(3, 6);
+  if (digits.length > 6) result += '-' + digits.substring(6, 8);
+  if (digits.length > 8) result += '-' + digits.substring(8, 10);
+  return result;
+}
+
+function extractDigitsAfter7(value) {
+  const allDigits = value.replace(/\D/g, '');
+  // Если начинается с 7 или 8 — отбрасываем первую цифру
+  if (allDigits.length > 0 && (allDigits[0] === '7' || allDigits[0] === '8')) {
+    return allDigits.substring(1, 11);
+  }
+  return allDigits.substring(0, 10);
+}
+
+function handlePhoneInput(e) {
+  const input = e.target;
+  const digits = extractDigitsAfter7(input.value);
+  const formatted = formatPhone(digits);
+  // Сохраняем позицию курсора относительно конца
+  input.value = formatted;
+  // Курсор в конец
+  input.setSelectionRange(formatted.length, formatted.length);
+}
+
+function handlePhoneFocus(e) {
+  const input = e.target;
+  if (!input.value || input.value.trim() === '') {
+    input.value = '+7';
+    setTimeout(() => input.setSelectionRange(2, 2), 0);
+  }
+}
+
+function handlePhoneKeydown(e) {
+  const input = e.target;
+  // Разрешаем: стрелки, Tab, Ctrl+A/C/V/X, Delete
+  if (['ArrowLeft', 'ArrowRight', 'Tab', 'Home', 'End'].includes(e.key)) return;
+  if (e.ctrlKey || e.metaKey) return;
+
+  // Backspace — удаляем последнюю цифру
+  if (e.key === 'Backspace') {
+    e.preventDefault();
+    const digits = extractDigitsAfter7(input.value);
+    if (digits.length > 0) {
+      input.value = formatPhone(digits.slice(0, -1));
+    } else {
+      input.value = '+7';
+    }
+    input.setSelectionRange(input.value.length, input.value.length);
+    return;
+  }
+
+  // Только цифры
+  if (!/^\d$/.test(e.key)) {
+    e.preventDefault();
+    return;
+  }
+
+  // Максимум 10 цифр после 7
+  const digits = extractDigitsAfter7(input.value);
+  if (digits.length >= 10) {
+    e.preventDefault();
+  }
+}
+
+
 /* ============================================
    ЗАПУСК
    ============================================ */
@@ -519,5 +595,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initCalculatorForm();
   initInlineForm();
   initDowntimeCalculator();
+  initPhoneMasks();
   initYandexMetrika();
 });
